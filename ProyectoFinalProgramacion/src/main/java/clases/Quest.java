@@ -12,6 +12,7 @@ public class Quest extends NamedEntity{
 		this.description = description;
 		this.reward = reward;
 	}
+	
 
 	public String getDescription() {
 		return description;
