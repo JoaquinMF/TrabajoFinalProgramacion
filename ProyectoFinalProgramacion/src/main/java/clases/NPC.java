@@ -11,19 +11,16 @@ public class NPC extends NamedEntity {
 	private boolean enemy;
 	private ArrayList<Quest> give;
 	private boolean boss;
-	private ArrayList<Gear> loot;
 	private short hp;
 	private short damage;
 	private short speed;
 	
-	public NPC(String name, Region location, boolean enemy, ArrayList<Quest> give, boolean boss, ArrayList<Gear> loot, short hp,
-			short damage, short speed) {
+	public NPC(String name, Region location, boolean enemy, ArrayList<Quest> give, boolean boss, short hp,short damage, short speed) {
 		super(name);
 		this.location = location;
 		this.enemy = enemy;
 		this.give = give;
 		this.boss = boss;
-		this.loot = loot;
 		this.hp = hp;
 		this.damage = damage;
 		this.speed = speed;
@@ -61,13 +58,6 @@ public class NPC extends NamedEntity {
 		this.boss = boss;
 	}
 
-	public ArrayList<Gear> getLoot() {
-		return loot;
-	}
-
-	public void setLoot(ArrayList<Gear> loot) {
-		this.loot = loot;
-	}
 
 	public short getHp() {
 		return hp;
