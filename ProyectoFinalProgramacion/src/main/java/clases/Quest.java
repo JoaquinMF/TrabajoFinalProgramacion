@@ -2,17 +2,26 @@ package clases;
 
 public class Quest extends NamedEntity{
 
-	
-	private Item reward;
 	private String description;
+	private Item reward;
 	
 	
-	public Quest(String name, Item reward, String description) {
+	
+	public Quest(String name, String description, Item reward) {
 		super(name);
-		this.reward = reward;
 		this.description = description;
+		this.reward = reward;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 
 	public Item getReward() {
 		return reward;
@@ -24,14 +33,6 @@ public class Quest extends NamedEntity{
 	}
 
 
-	public String getDescription() {
-		return description;
-	}
-
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
 	
 	
 	

@@ -1,6 +1,7 @@
 package clases;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.plaf.synth.Region;
 
@@ -8,14 +9,14 @@ public class NPC extends NamedEntity {
 	
 	private Region location;
 	private boolean enemy;
-	private Quest give;
+	private ArrayList<Quest> give;
 	private boolean boss;
 	private ArrayList<Gear> loot;
 	private short hp;
 	private short damage;
 	private short speed;
 	
-	public NPC(String name, Region location, boolean enemy, Quest give, boolean boss, ArrayList<Gear> loot, short hp,
+	public NPC(String name, Region location, boolean enemy, ArrayList<Quest> give, boolean boss, ArrayList<Gear> loot, short hp,
 			short damage, short speed) {
 		super(name);
 		this.location = location;
@@ -44,11 +45,11 @@ public class NPC extends NamedEntity {
 		this.enemy = enemy;
 	}
 
-	public Quest getGive() {
+	public ArrayList<Quest> getGive() {
 		return give;
 	}
 
-	public void setGive(Quest give) {
+	public void setGive(ArrayList<Quest> give) {
 		this.give = give;
 	}
 
