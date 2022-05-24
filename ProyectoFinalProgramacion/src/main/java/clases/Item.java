@@ -1,6 +1,6 @@
 package clases;
 
-public class Item extends NamedEntity{
+public class Item extends NamedEntity {
 
 	private String info;
 	private Boolean isQuest;
