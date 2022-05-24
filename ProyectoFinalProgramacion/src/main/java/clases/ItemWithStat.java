@@ -7,13 +7,17 @@ import enums.GearList;
 public class ItemWithStat extends Item {
 	
 	private GearList itemSlot;
-	private short stats;
+	private short passiveHp;
+	private short passiveStrength;
+	private short passiveSpeed;
 	private BufferedImage icon;
 	
-	public ItemWithStat(String name, String info, Boolean isQuest, GearList itemSlot, short stats, BufferedImage icon) {
+	public ItemWithStat(String name, String info, Boolean isQuest, GearList itemSlot, short passiveHp,short passiveStrength, short passiveSpeed, BufferedImage icon) {
 		super(name, info, isQuest);
 		this.itemSlot = itemSlot;
-		this.stats = stats;
+		this.passiveHp = passiveHp;
+		this.passiveStrength = passiveStrength;
+		this.passiveSpeed = passiveSpeed;
 		this.icon = icon;
 	}
 
@@ -25,12 +29,28 @@ public class ItemWithStat extends Item {
 		this.itemSlot = itemSlot;
 	}
 
-	public short getStats() {
-		return stats;
+	public short getPassiveHp() {
+		return passiveHp;
 	}
 
-	public void setStats(short stats) {
-		this.stats = stats;
+	public void setPassiveHp(short passiveHp) {
+		this.passiveHp = passiveHp;
+	}
+
+	public short getPassiveStrength() {
+		return passiveStrength;
+	}
+
+	public void setPassiveStrength(short passiveStrength) {
+		this.passiveStrength = passiveStrength;
+	}
+
+	public short getPassiveSpeed() {
+		return passiveSpeed;
+	}
+
+	public void setPassiveSpeed(short passiveSpeed) {
+		this.passiveSpeed = passiveSpeed;
 	}
 
 	public BufferedImage getIcon() {
@@ -40,8 +60,8 @@ public class ItemWithStat extends Item {
 	public void setIcon(BufferedImage icon) {
 		this.icon = icon;
 	}
-
-
+	
+	
 	
 
 }

@@ -29,6 +29,8 @@ public class Class extends NamedEntity{
 		this.skillTree = skillTree;
 	}
 	
+	Class clawbringer=new Class("Clawbringer","Hit hard, punch harder",null);
+	Class stabbomancer=new Class("Stabbomancer","Shanking never felt so good",null);
 	
 
 }

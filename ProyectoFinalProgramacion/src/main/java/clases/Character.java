@@ -8,24 +8,22 @@ import enums.GearList;
 public class Character extends NamedEntity{
 	
 	private Class clase;
-	private ArrayList<GearList> gearSlot;
+	private ArrayList<GearList> gearSlots;
 	private ArrayList<Skill> passives;
 	private short hp;
-	private short sp;
+	private short damage;
 	private short strength;
-	private short stamina;
 	private short speed;
 	
-	public Character(String name, Class clase, ArrayList<GearList> gearSlot, ArrayList<Skill> passives, short hp,
-			short sp, short strength, short stamina, short speed) {
+	public Character(String name, Class clase, ArrayList<GearList> gearSlots, ArrayList<Skill> passives, short hp,
+			short damage, short strength, short speed) {
 		super(name);
 		this.clase = clase;
-		this.gearSlot = gearSlot;
+		this.gearSlots = gearSlots;
 		this.passives = passives;
 		this.hp = hp;
-		this.sp = sp;
+		this.damage = damage;
 		this.strength = strength;
-		this.stamina = stamina;
 		this.speed = speed;
 	}
 
@@ -37,12 +35,12 @@ public class Character extends NamedEntity{
 		this.clase = clase;
 	}
 
-	public ArrayList<GearList> getGearSlot() {
-		return gearSlot;
+	public ArrayList<GearList> getGearSlots() {
+		return gearSlots;
 	}
 
-	public void setGearSlot(ArrayList<GearList> gearSlot) {
-		this.gearSlot = gearSlot;
+	public void setGearSlots(ArrayList<GearList> gearSlots) {
+		this.gearSlots = gearSlots;
 	}
 
 	public ArrayList<Skill> getPassives() {
@@ -61,12 +59,12 @@ public class Character extends NamedEntity{
 		this.hp = hp;
 	}
 
-	public short getSp() {
-		return sp;
+	public short getDamage() {
+		return damage;
 	}
 
-	public void setSp(short sp) {
-		this.sp = sp;
+	public void setDamage(short damage) {
+		this.damage = damage;
 	}
 
 	public short getStrength() {
@@ -75,14 +73,6 @@ public class Character extends NamedEntity{
 
 	public void setStrength(short strength) {
 		this.strength = strength;
-	}
-
-	public short getStamina() {
-		return stamina;
-	}
-
-	public void setStamina(short stamina) {
-		this.stamina = stamina;
 	}
 
 	public short getSpeed() {
