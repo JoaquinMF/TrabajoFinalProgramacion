@@ -84,7 +84,7 @@ public class UI {
 			String objFileName, String choice1Name, String choice2Name, String choice3Name) {
 		
 		//CREATE POP MENU
-		JPopupMenu popMenu=new JPopupMenu();
+		final JPopupMenu popMenu=new JPopupMenu();
 		//CREATE POP MENU ITEMS
 		JMenuItem menuItem[]=new JMenuItem[4]; //Usar [1],[2],[3]
 		menuItem[1]=new JMenuItem(choice1Name);
@@ -96,7 +96,7 @@ public class UI {
 		menuItem[3]=new JMenuItem(choice3Name);
 		popMenu.add(menuItem[3]);
 		//CREATE OBJECTS
-		JLabel objectLabel=new JLabel();
+		final JLabel objectLabel=new JLabel();
 		//objectLabel.setBounds(750,690,200,84);
 		objectLabel.setBounds(objx,oby,objWidth,objectHeight);
 		
@@ -135,7 +135,7 @@ public class UI {
 		//SCREEN 1
 		createBackground(1,"brightfoot1024x800.PNG");
 		createObject(1,750,690,200,84,"chest200x84OBJECT.PNG","Look","Open","Talk");
-		createObject(1,550,490,130,274,"seta130x274OBJECT.PNG","","","");
+		createObject(1,550,490,130,274,"seta130x274OBJECT.PNG","Look","Talk","Attack");
 		
 		
 	}
