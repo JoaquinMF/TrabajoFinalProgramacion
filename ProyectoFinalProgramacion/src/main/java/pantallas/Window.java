@@ -8,20 +8,21 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import clases.GameManager;
+
 public class Window extends JFrame {
 	
 	private HashMap<String,JPanel> windows;
 	
-	public Window() {
+	public Window(GameManager gm) {
 		windows=new HashMap<String,JPanel>();
 		windows.put("new game",new GameWindow());
 		
-		
 		this.setSize(800, 500);
 		this.setLocationRelativeTo(null);
-		this.setIconImage(new ImageIcon("./iconos/javaIcon.png").getImage());
-		this.setTitle("Pruebas y apuntes Interfaces Graficas 1DAM");
-		//this.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+		this.setIconImage(new ImageIcon("").getImage());
+		this.setTitle("");
+		this.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 		this.setResizable(false);
 		
 		//this.setExtendedState(JFrame.MAXIMIZED_BOTH); //<- "pantalla completa"
@@ -45,4 +46,7 @@ public class Window extends JFrame {
 		this.setContentPane(this.windows.get(nombrePantalla));
 	}
 
+	
+	
+	
 }
