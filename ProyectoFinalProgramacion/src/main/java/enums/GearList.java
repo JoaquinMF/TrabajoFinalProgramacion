@@ -4,8 +4,8 @@ public enum GearList {
 
 	CHEST,
 	HELMET,
-	HANDS,
-	FEET,
+	GLOVES,
+	BOOTS,
 	RING,
 	RIGHTHAND,
 	LEFTHAND

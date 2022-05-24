@@ -15,8 +15,6 @@ public class Window extends JFrame {
 	public Window() {
 		windows=new HashMap<String,JPanel>();
 		windows.put("new game",new GameWindow());
-		windows.put("load game", new GameWindow());
-		
 		
 		
 		this.setSize(800, 500);

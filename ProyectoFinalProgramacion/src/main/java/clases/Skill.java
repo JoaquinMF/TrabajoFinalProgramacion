@@ -9,8 +9,7 @@ public class Skill {
 	private short passiveStamina;
 	private short passiveSpeed;
 	
-	public Skill(String whatDoes, short passiveHp, short passiveSp, short passiveStrength, short passiveStamina,
-			short passiveSpeed) {
+	public Skill(String whatDoes, short passiveHp, short passiveSp, short passiveStrength, short passiveStamina,short passiveSpeed) {
 		super();
 		this.whatDoes = whatDoes;
 		this.passiveHp = passiveHp;
