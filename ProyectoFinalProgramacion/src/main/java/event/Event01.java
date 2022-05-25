@@ -19,12 +19,32 @@ public class Event01 {
 	}
 
 	public void openChest() {
-		gm.ui.messages.setText("You plunder the ol' sweet loot.\n(You take ");
+		gm.ui.messages.setText("You plunder the ol' sweet loot.\n(You take the shiny dagger inside... )");
 		
 	}
 
 	public void talkChest() {
 		gm.ui.messages.setText("You approach the chest, and clasp your hands together. Then you recite a pray to the RNG Goddess...");
+		
+		
+	}
+	
+	public void lookSeta() {
+		gm.ui.messages.setText("You look at the mutant mushroom, you can't help but scream who let that abomination in.");
+
+		
+	}
+	
+	
+	public void attackSeta() {
+		gm.ui.messages.setText("You slash at it's horrible face.\n (You deal )"); //Terminar
+		
+		
+	}
+	
+	
+	public void talkSeta() {
+		gm.ui.messages.setText("You shout at the mushroom how can be so ugly... you hear a growl in return. Maybe it's offended?");
 		
 		
 	}

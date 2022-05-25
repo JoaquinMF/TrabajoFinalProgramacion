@@ -18,11 +18,12 @@ public class ActionHandler implements ActionListener {
 
 		switch (yourChoice) {
 
-		case "lookChest": break;
-		case "openChest": break; //terminar
-		case "talkChest": break;	
-			
-
+		case "lookChest": gm.ev1.lookChest(); break;
+		case "openChest": gm.ev1.openChest(); break; //terminar
+		case "talkChest": gm.ev1.talkChest();break;	
+		case "lookSeta": gm.ev1.lookSeta();break;
+		case "attackSeta": gm.ev1.attackSeta();break;
+		case "talkSeta": gm.ev1.talkSeta();break;
 		}
 
 	}
