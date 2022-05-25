@@ -139,7 +139,10 @@ public class UI {
 	
 	public void createArrowButton(int bgNum, int x, int y, int width, int height, String arrowFileName, String command) {
 		
+		final JLabel objectLabel = new JLabel();
+		
 		ImageIcon arrowIcon=new ImageIcon(getClass().getClassLoader().getResource(arrowFileName));
+		objectLabel.setIcon(arrowIcon);
 		
 		JButton arrowButton = new JButton();
 		arrowButton.setBounds(x,y,width,height);
@@ -160,7 +163,7 @@ public class UI {
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta", "attackSeta","talkSeta");
-		createArrowButton(1,0,150,100,100,"directionArrowICON100x100.png","goRegion2");
+		createArrowButton(1,0,150,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
 
 	}
