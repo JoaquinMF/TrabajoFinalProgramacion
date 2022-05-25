@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import clases.GameManager;
+import principal.GameManager;
 
 public class Window extends JFrame {
 	

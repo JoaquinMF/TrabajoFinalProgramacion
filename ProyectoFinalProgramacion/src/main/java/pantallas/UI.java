@@ -9,10 +9,11 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
+import principal.GameManager;
+
 import java.awt.Font;
 
 import java.awt.Color;
-import clases.GameManager;
 import java.awt.SystemColor;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

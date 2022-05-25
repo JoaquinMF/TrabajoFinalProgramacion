@@ -3,11 +3,14 @@ package clases;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import pantallas.WorldWindow;
-
 public class World extends NamedEntity {
+
+	public World(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
 	
-	private ArrayList<Quest> mainQuest;
+	/*private ArrayList<Quest> mainQuest;
 	//private collections sideQuest;
 	private WorldWindow worldMap;
 	private HashMap<String, WorldWindow> region;
@@ -41,7 +44,7 @@ public class World extends NamedEntity {
 
 	public void setRegion(HashMap<String, WorldWindow> region) {
 		this.region = region;
-	}
+	}*/
 	
 	
 	
