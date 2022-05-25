@@ -22,6 +22,9 @@ public class RegionChanger {
 		gm.ui.bgPanel[1].setVisible(false);
 		gm.ui.bgPanel[2].setVisible(true);
 		gm.ui.messages.setText("After your scuffle with that horrendous shroom, you wandered around, until You found what it's seems like the main plaza... there, you spot a guard, and the majestuous ruler of the Wonderlands, Her Esteemed Queen Buttstallion, with all her shiny mane fluttering to the wind. They seem stressed.");
+		
+		
+		
 	}
 
 }
