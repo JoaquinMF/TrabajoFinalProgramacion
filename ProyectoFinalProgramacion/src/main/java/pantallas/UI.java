@@ -139,10 +139,10 @@ public class UI {
 	
 	public void createArrowButton(int bgNum, int x, int y, int width, int height, String arrowFileName, String command) {
 		
-		final JLabel objectLabel = new JLabel();
+		//final JLabel objectLabel = new JLabel();
 		
 		ImageIcon arrowIcon=new ImageIcon(getClass().getClassLoader().getResource(arrowFileName));
-		objectLabel.setIcon(arrowIcon);
+		//objectLabel.setIcon(arrowIcon);
 		
 		JButton arrowButton = new JButton();
 		arrowButton.setBounds(x,y,width,height);
