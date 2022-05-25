@@ -1,6 +1,7 @@
 package pantallas;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
@@ -17,7 +18,7 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.HashMap;
+
 
 public class UI {
 
@@ -132,16 +133,35 @@ public class UI {
 		});
 
 		bgPanel[bgNum].add(objectLabel);
-		bgPanel[bgNum].add(bgLabel[bgNum]);
+		
 
+	}
+	
+	public void createArrowButton(int bgNum, int x, int y, int width, int height, String arrowFileName, String command) {
+		
+		ImageIcon arrowIcon=new ImageIcon(getClass().getClassLoader().getResource(arrowFileName));
+		
+		JButton arrowButton = new JButton();
+		arrowButton.setBounds(x,y,width,height);
+		arrowButton.setBackground(null);
+		arrowButton.setContentAreaFilled(false);
+		arrowButton.setFocusPainted(false);
+		arrowButton.setIcon(arrowIcon);
+		arrowButton.addActionListener(gm.aHandler);
+		arrowButton.setActionCommand(command);
+		
+		bgPanel[bgNum].add(arrowButton);
+		
 	}
 
 	public void generateScreen() {
 
-		// SCREEN 1
+		// REGION 1
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta", "attackSeta","talkSeta");
+		createArrowButton(1,0,150,100,100,"directionArrowICON100x100.png","goRegion2");
+		bgPanel[1].add(bgLabel[1]);
 
 	}
 
