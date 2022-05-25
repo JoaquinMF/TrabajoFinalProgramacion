@@ -1,4 +1,4 @@
-package principal;
+package clases;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +24,13 @@ public class ActionHandler implements ActionListener {
 		case "lookSeta": gm.ev1.lookSeta();break;
 		case "attackSeta": gm.ev1.attackSeta();break;
 		case "talkSeta": gm.ev1.talkSeta();break;
+		
+		//Change Region
+		case "goRegion1": gm.rChanger.showRegion1();break;
+		case "goRegion2": gm.rChanger.showRegion2();break;
+		
+		
+		
 		}
 
 	}

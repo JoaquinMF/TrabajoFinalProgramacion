@@ -1,6 +1,6 @@
 package event;
 
-import principal.GameManager;
+import clases.GameManager;
 
 public class Event01 {
 

@@ -10,7 +10,7 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
-import principal.GameManager;
+import clases.GameManager;
 
 import java.awt.Font;
 
@@ -69,7 +69,8 @@ public class UI {
 		bgPanel[bgNum].setBounds(50, 50, 1100, 960);
 		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
-		window.getContentPane().add(bgPanel[1]);
+		//bgPanel[bgNum].setVisible(false);
+		window.getContentPane().add(bgPanel[bgNum]);
 
 		bgLabel[bgNum] = new JLabel();
 		bgLabel[bgNum].setBounds(0, 0, 1100, 960);
@@ -159,13 +160,21 @@ public class UI {
 
 	public void generateRegion() {
 
-		// REGION 1
+		//REGION 1
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta", "attackSeta","talkSeta");
 		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
-
+		
+		//REGION 2
+		createBackground(2, "brightfoot21024x800.png");
+		//createObject(2, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
+		//createObject(2, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
+		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
+		bgPanel[2].add(bgLabel[2]);
+		
+		
 	}
 
 }
