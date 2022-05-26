@@ -186,6 +186,7 @@ public class UI {
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta", "attackSeta","talkSeta");
+		createObject(1, 250, 290, 130, 274, "blankICON300X300", "Look", "Talk", "Use Rope", "lookblank", "talkBlank","useRope");
 		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
 		
