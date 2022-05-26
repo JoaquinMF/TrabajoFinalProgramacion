@@ -51,7 +51,7 @@ public class UI {
 		window.getContentPane().setBackground(Color.black);
 		window.getContentPane().setLayout(null);
 
-		messages = new JTextArea("TEXTO DE PRUEBA");
+		messages = new JTextArea("");
 		messages.setBounds(100, 795, 528, 106);
 		messages.setBackground(new Color(135, 206, 235));
 		messages.setForeground(new Color(0, 0, 0));
@@ -169,8 +169,8 @@ public class UI {
 		
 		//REGION 2
 		createBackground(2, "brightfoot21024x800.png");
-		createObject(2, 350, 350, 600, 400, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
-		createObject(2, 350, 370, 600, 400, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
+		createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
+		createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
 		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[2].add(bgLabel[2]);
 		
