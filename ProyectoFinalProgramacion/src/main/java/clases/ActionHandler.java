@@ -31,6 +31,7 @@ public class ActionHandler implements ActionListener {
 		case "attackButtstallion": gm.ev1.attackButtstallion();break;
 		case "talkButtstallion": gm.ev1.talkButtstallion();break;
 		
+		
 		//Change Region
 		case "goRegion1": gm.rChanger.showRegion1();break;
 		case "goRegion2": gm.rChanger.showRegion2();break;

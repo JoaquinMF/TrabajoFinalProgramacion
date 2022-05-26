@@ -11,13 +11,16 @@ import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
 import clases.GameManager;
-
+import event.Event01;
 import java.awt.Font;
 
 import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.Button;
+import java.awt.event.MouseAdapter;
+import javax.swing.UIManager;
 
 
 public class UI {
@@ -28,6 +31,7 @@ public class UI {
 	public JTextArea messages;
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
+	private JButton btnNewButton;
 	// public HashMap<String,JPanel> bgPanel=new HashMap<String,JPanel>();
 
 	public UI(GameManager gm) {
@@ -60,7 +64,25 @@ public class UI {
 		messages.setWrapStyleWord(true);
 		messages.setFont(new Font("Gabriola", Font.PLAIN, 24));
 		window.getContentPane().add(messages);
-
+		
+		JButton btnA= new JButton("    ");
+		btnA.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnA.setBounds(572, 362, 89, 23);
+		btnA.setOpaque(false);
+		btnA.setContentAreaFilled(false);
+		btnA.setBorderPainted(false);
+		btnA.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				if (SwingUtilities.isLeftMouseButton(e)) {
+					messages.setText("You take a rope");
+				}
+				
+			}
+		});
+		window.getContentPane().add(btnA);
+		
 	}
 
 	public void createBackground(int bgNum, String bgFileName) {
@@ -87,7 +109,7 @@ public class UI {
 		// CREATE POP MENU
 		final JPopupMenu popMenu = new JPopupMenu();
 		// CREATE POP MENU ITEMS
-		JMenuItem menuItem[] = new JMenuItem[4]; // Usar [1],[2],[3]
+		JMenuItem menuItem[] = new JMenuItem[10]; // Usar [1],[2],[3]
 		menuItem[1] = new JMenuItem(choice1Name);
 		menuItem[1].addActionListener(gm.aHandler);
 		menuItem[1].setActionCommand(choice1Command);
@@ -176,5 +198,4 @@ public class UI {
 		
 		
 	}
-
 }
