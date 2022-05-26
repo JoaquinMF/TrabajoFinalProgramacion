@@ -1,8 +1,9 @@
 package clases;
 
 import event.Event01;
+import event.Event02;
 import pantallas.UI;
-import pantallas.Window;
+
 
 public class GameManager {
 
@@ -14,6 +15,7 @@ public class GameManager {
 	public RegionChanger rChanger=new RegionChanger(this);
 
 	public Event01 ev1=new Event01(this);
+	public Event02 ev2=new Event02(this);
 	
 	public GameManager() {
 		

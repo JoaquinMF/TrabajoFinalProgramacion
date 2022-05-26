@@ -21,10 +21,10 @@ public class RegionChanger {
 
 		gm.ui.bgPanel[1].setVisible(false);
 		gm.ui.bgPanel[2].setVisible(true);
-		gm.ui.messages.setText("After your fight, you wandered around, until You found the main plaza... there, you spot a guard, and the majestuous ruler of the Wonderlands, Her Esteemed Queen Buttstallion, they look at You..");
-		
-		
+		gm.ui.messages.setText("After your fight, you wandered around, until You found the main plaza... there, you spot a guard, and the majestuous ruler of the Wonderlands, Her Esteemed Queen Buttstallion, they look at You..");	
 		
 	}
+	
+	
 
 }
