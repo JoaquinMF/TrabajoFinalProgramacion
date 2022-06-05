@@ -19,7 +19,16 @@ public class Event01 {
 	}
 
 	public void openChest() {
-		gm.ui.messages.setText("You plunder the ol' sweet loot.\n(You take the shiny dagger inside... )");
+		
+		if(gm.player.hasWeapon==0) {
+			gm.ui.messages.setText("You plunder the ol' sweet loot.\n(You take the shiny dagger inside... )");
+			gm.player.hasWeapon=1;
+			gm.player.updatePlayerStatus();
+		}else {
+			gm.ui.messages.setText("You already looted the chest... )");
+		}
+		
+		
 		
 	}
 
