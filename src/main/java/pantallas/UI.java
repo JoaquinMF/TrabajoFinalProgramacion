@@ -230,13 +230,13 @@ public class UI {
 		inventoryPanel.add(weaponLabel);
 		
 		defenseLabel=new JLabel();
-		//ImageIcon defenseIcon=new ImageIcon(getClass().getClassLoader().getResource("chestArmorICON100x100.png"));
-		//defenseLabel.setIcon(defenseIcon);
+		ImageIcon defenseIcon=new ImageIcon(getClass().getClassLoader().getResource("chestArmorICON100x100.png"));
+		defenseLabel.setIcon(defenseIcon);
 		inventoryPanel.add(defenseLabel);
 		
 		itemLabel=new JLabel();
-		//ImageIcon itemIcon=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
-		//itemLabel.setIcon(itemIcon);
+		ImageIcon itemIcon=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
+		itemLabel.setIcon(itemIcon);
 		inventoryPanel.add(itemLabel);
 		
 		
