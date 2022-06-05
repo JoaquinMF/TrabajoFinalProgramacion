@@ -25,7 +25,7 @@ public class Event01 {
 			gm.player.hasWeapon=1;
 			gm.player.updatePlayerStatus();
 		}else {
-			gm.ui.messages.setText("You already looted the chest... )");
+			gm.ui.messages.setText("You already looted the chest... ");
 		}
 		
 		
@@ -46,10 +46,29 @@ public class Event01 {
 	
 	
 	public void attackSeta() {
-		gm.ui.messages.setText("You slash at it's horrible face.\n (You deal )"); //Terminar
 		
-		
+		if(gm.player.hasDefense==0) {
+			if(gm.player.hasWeapon==0) {
+				if(gm.player.playerCurrentLife!=1) {
+				gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your life decreases by 1.");
+				gm.player.playerCurrentLife--;
+				
+				
+				}else if(gm.player.playerCurrentLife==1) {
+					gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your die.");
+					gm.player.playerCurrentLife--;
+					
+					
+				}
+			}else if(gm.player.hasWeapon==1) {
+				gm.ui.messages.setText("You attack the mushroom with your dagger, you have defeated it.");
+				gm.player.hasDefense=1;
+			
+		}else {
+			gm.ui.messages.setText("Is already dead.");
+		}
 	}
+}
 	
 	
 	public void talkSeta() {
