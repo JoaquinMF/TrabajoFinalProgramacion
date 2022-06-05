@@ -44,9 +44,9 @@ public class UI {
 	public JLabel itemLabel;
 	
 	//START AND GAME OVER UI
+	public JLabel gameOverLabel;
+	public JButton restartButton;
 	
-	public JLabel tittleLabel;
-	public JButton startButton;
 	
 	// public HashMap<String,JPanel> bgPanel=new HashMap<String,JPanel>();
 
@@ -55,12 +55,10 @@ public class UI {
 
 		createMainField();
 		createPlayerField();
-		createStartAndGameOverField();
+		createGameOverField();
 		generateRegion();
 
-		// createBackground();
-		// createObject();
-
+		
 		window.setVisible(true);
 	}
 
@@ -92,7 +90,7 @@ public class UI {
 		bgPanel[bgNum].setBounds(50, 50, 1100, 990);
 		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
-		bgPanel[bgNum].setVisible(false);
+		//bgPanel[bgNum].setVisible(false);
 		window.getContentPane().add(bgPanel[bgNum]);
 
 		bgLabel[bgNum] = new JLabel();
@@ -231,54 +229,55 @@ public class UI {
 		
 	}
 	
-	public void createStartAndGameOverField(){
+	public void createGameOverField() {
 		
-		tittleLabel=new JLabel();
-		tittleLabel.setBounds(200,150,400,200);
-		tittleLabel.setBackground(Color.black);
-		tittleLabel.setForeground(Color.red);
-		tittleLabel.setFont(new Font("Times New Roman",Font.PLAIN,70));
-		tittleLabel.setVisible(false);
-		window.add(tittleLabel);
+		gameOverLabel=new JLabel();
+		gameOverLabel.setBounds(200,150,400,200);
+		gameOverLabel.setForeground(Color.red);
+		gameOverLabel.setFont(new Font("Times new Roman",Font.PLAIN,70));
+		gameOverLabel.setBackground(Color.black);
+		gameOverLabel.setVisible(false);
+		window.add(gameOverLabel);
 		
-		startButton=new JButton();
-		startButton.setBounds(340,320,120,50);
-		startButton.setBorder(null);
-		startButton.setBackground(null);
-		startButton.setForeground(Color.white);
-		startButton.setFocusPainted(false);
-		startButton.addActionListener(gm.aHandler);
-		startButton.setActionCommand("start");
-		startButton.setVisible(false);
-		window.add(startButton);
-		
+		restartButton=new JButton();
+		restartButton.setBounds(340,320,120,50);
+		restartButton.setBorder(null);
+		restartButton.setBackground(null);
+		restartButton.setForeground(Color.white);
+		restartButton.setFocusPainted(false);
+		restartButton.addActionListener(gm.aHandler);
+		restartButton.setActionCommand("restart");
+		restartButton.setVisible(false);
+		window.add(restartButton);
 	}
+	
+	
 	public void generateRegion() {
 
 		//REGION 1
-		createBackground(2, "brightfoot1024x800.PNG");
-		createObject(2, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
-		createObject(2, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
-		createObject(2, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Climb Cliff", "lookCliff", "talkCliff","climbCliff");
-		createArrowButton(2,820,270,100,100,"directionArrowICON.png","goRegion2");
-		bgPanel[2].add(bgLabel[2]);
+		createBackground(1, "brightfoot1024x800.PNG");
+		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
+		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
+		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Climb Cliff", "lookCliff", "talkCliff","climbCliff");
+		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
+		bgPanel[1].add(bgLabel[1]);
 		
 		//REGION 2
-		createBackground(3, "brightfoot21024x800.png");
-		createObject(3, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
-		createObject(3, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
-		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
-		createArrowButton(3,140,580,100,100,"directionArrowICON.png","goRegion1");
-		bgPanel[3].add(bgLabel[3]);
+		createBackground(2, "brightfoot21024x800.png");
+		createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
+		createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
+		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
+		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
+		bgPanel[2].add(bgLabel[2]);
 		
 		
 		//REGION 3
-		createBackground(4, "lootbay1024x800.png");
+		createBackground(3, "lootbay1024x800.png");
 		//createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
 		//createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
 		//createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
-		createArrowButton(4,900,780,100,100,"directionArrowICON.png","goRegion1");
-		bgPanel[4].add(bgLabel[4]);
+		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
+		bgPanel[3].add(bgLabel[3]);
 		
 		
 	}

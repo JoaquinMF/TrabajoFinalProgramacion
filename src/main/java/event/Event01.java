@@ -52,24 +52,22 @@ public class Event01 {
 				if(gm.player.playerCurrentLife!=1) {
 				gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your life decreases by 1.");
 				gm.player.playerCurrentLife--;
-				
+				gm.player.updatePlayerStatus();
 				
 				}else if(gm.player.playerCurrentLife==1) {
 					gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your die.");
 					gm.player.playerCurrentLife--;
-					gm.rChanger.showGameOverScreen(2);
+					gm.player.updatePlayerStatus();
+					gm.rChanger.showGameOverScreen(1);
 					
 				}
 			}else if(gm.player.hasWeapon==1) {
 				gm.ui.messages.setText("You attack the mushroom with your dagger, you have defeated it.");
 				gm.player.hasDefense=1;
-			
+				gm.player.updatePlayerStatus();
 		}else {
 			gm.ui.messages.setText("Is already dead.");
 		}
-		
-		gm.player.updatePlayerStatus();
-			
 	}
 }
 	
@@ -99,7 +97,6 @@ public class Event01 {
 			
 		}else {
 			
-			gm.rChanger.showRegion3();
 			
 		}
 		

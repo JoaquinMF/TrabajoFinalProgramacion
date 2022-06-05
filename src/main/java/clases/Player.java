@@ -17,7 +17,6 @@ public class Player {
 		
 	}
 	
-	
 	public void setPlayerDefaultStatus() {
 		
 		playerMaxLife = 5;

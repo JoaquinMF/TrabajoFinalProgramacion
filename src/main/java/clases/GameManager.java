@@ -21,8 +21,10 @@ public class GameManager {
 	
 	public GameManager() {
 		
-		player.setPlayerDefaultStatus();
+		
 		rChanger.showRegion1();
+		player.setPlayerDefaultStatus();
+		
 	   
 	}
 	

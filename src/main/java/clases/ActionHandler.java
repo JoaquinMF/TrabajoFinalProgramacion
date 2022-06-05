@@ -41,13 +41,14 @@ public class ActionHandler implements ActionListener {
 		
 		
 		//Change Region
+		
 		case "goRegion1": gm.rChanger.showRegion1();break;
 		case "goRegion2": gm.rChanger.showRegion2();break;
 		
 		//OTHERS
-		case "start": gm.rChanger.existGameOverScreen();
-					  gm.rChanger.showRegion1();
-					  break;
+		case "restart": gm.rChanger.exitGameOverScreen();
+						gm.rChanger.showRegion1();
+						break;
 		
 		
 		}
