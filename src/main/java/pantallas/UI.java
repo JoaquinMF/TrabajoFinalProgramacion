@@ -200,7 +200,7 @@ public class UI {
 		
 		lifePanel=new JPanel();
 		lifePanel.setBounds(50, 10, 500, 100);
-		lifePanel.setBackground(null);
+		lifePanel.setBackground(Color.black);
 		lifePanel.setLayout(new GridLayout(1,5));
 		window.add(lifePanel);
 		
@@ -215,6 +215,31 @@ public class UI {
 			lifePanel.add(lifeLabel[i]);
 			i++;
 		}
+		
+		inventoryPanel =new JPanel();
+		inventoryPanel.setBounds(600,10,300,120);
+		inventoryPanel.setBackground(Color.blue);
+		inventoryPanel.setLayout(new GridLayout(1,3));
+		window.add(inventoryPanel);
+		
+		//Create items
+		
+		weaponLabel=new JLabel();
+		ImageIcon weaponIcon=new ImageIcon(getClass().getClassLoader().getResource("dagger154x20ICON.PNG"));
+		weaponLabel.setIcon(weaponIcon);
+		inventoryPanel.add(weaponLabel);
+		
+		defenseLabel=new JLabel();
+		//ImageIcon defenseIcon=new ImageIcon(getClass().getClassLoader().getResource("chestArmorICON100x100.png"));
+		//defenseLabel.setIcon(defenseIcon);
+		inventoryPanel.add(defenseLabel);
+		
+		itemLabel=new JLabel();
+		//ImageIcon itemIcon=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
+		//itemLabel.setIcon(itemIcon);
+		inventoryPanel.add(itemLabel);
+		
+		
 		
 	}
 	
