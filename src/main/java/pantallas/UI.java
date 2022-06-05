@@ -225,8 +225,8 @@ public class UI {
 		//Create items
 		
 		weaponLabel=new JLabel();
-		//ImageIcon weaponIcon=new ImageIcon(getClass().getClassLoader().getResource("dagger100x13ICON.PNG"));
-		//weaponLabel.setIcon(weaponIcon);
+		ImageIcon weaponIcon=new ImageIcon(getClass().getClassLoader().getResource("dagger100x13ICON.png"));
+		weaponLabel.setIcon(weaponIcon);
 		inventoryPanel.add(weaponLabel);
 		
 		defenseLabel=new JLabel();
