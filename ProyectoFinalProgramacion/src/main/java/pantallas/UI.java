@@ -21,7 +21,7 @@ import java.awt.event.MouseListener;
 import java.awt.Button;
 import java.awt.event.MouseAdapter;
 import javax.swing.UIManager;
-
+import java.awt.GridLayout;
 
 public class UI {
 
@@ -31,6 +31,18 @@ public class UI {
 	public JTextArea messages;
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
+	
+	//Player UI
+	
+	JPanel lifePanel;
+	JLabel lifeLabel[]=new JLabel[6];
+	
+	JPanel inventoryPanel;
+	public JLabel weaponLabel;
+	public JLabel defenseLabel;
+	public JLabel itemLabel;
+	
+	
 	private JButton btnNewButton;
 	// public HashMap<String,JPanel> bgPanel=new HashMap<String,JPanel>();
 
@@ -38,7 +50,7 @@ public class UI {
 		this.gm = gm;
 
 		createMainField();
-
+		createPlayerField();
 		generateRegion();
 
 		// createBackground();
@@ -183,12 +195,36 @@ public class UI {
 		
 	}
 
+	public void createPlayerField() {
+		
+		lifePanel=new JPanel();
+		lifePanel.setBounds(50,0,250,50);
+		lifePanel.setBackground(Color.blue);
+		lifePanel.setLayout(new GridLayout(1,5));
+		
+		window.add(lifePanel);
+		
+		ImageIcon lifeIcon=new ImageIcon(getClass().getClassLoader().getResource("heartICON100X100.png"));
+		
+		short i=1;
+		
+		while(i<6) {
+			
+			lifeLabel[i]=new JLabel();
+			lifeLabel[i].setIcon(lifeIcon);
+			lifePanel.add(lifeLabel[i]);
+			i++;
+			
+		}
+		
+	}
+	
 	public void generateRegion() {
 
 		//REGION 1
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
-		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta", "attackSeta","talkSeta");
+		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
 		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Use Rope", "lookblank", "talkBlank","useRope");
 		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
