@@ -24,6 +24,11 @@ public class ActionHandler implements ActionListener {
 		case "lookSeta": gm.ev1.lookSeta();break;
 		case "attackSeta": gm.ev1.attackSeta();break;
 		case "talkSeta": gm.ev1.talkSeta();break;
+		case "lookCliff": gm.ev1.lookCliff();break;
+		case "talkCliff":gm.ev1.talkCliff();break;
+		case "useRope":gm.ev1.useRope();break;
+		
+		
 		case "lookMike": gm.ev2.lookMike();break;
 		case "attackMike": gm.ev2.attackMike();break;
 		case "talkMike": gm.ev2.talkMike();break;

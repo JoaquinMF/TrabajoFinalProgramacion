@@ -36,7 +36,7 @@ public class UI {
 	//Player UI
 	
 	JPanel lifePanel;
-	JLabel lifeLabel[]=new JLabel[6];
+	public JLabel lifeLabel[]=new JLabel[6];
 	
 	JPanel inventoryPanel;
 	public JLabel weaponLabel;
@@ -78,23 +78,7 @@ public class UI {
 		messages.setFont(new Font("Gabriola", Font.PLAIN, 24));
 		window.getContentPane().add(messages);
 		
-		JButton btnA= new JButton("    ");
-		btnA.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		btnA.setBounds(572, 362, 89, 23);
-		btnA.setOpaque(false);
-		btnA.setContentAreaFilled(false);
-		btnA.setBorderPainted(false);
-		btnA.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-				if (SwingUtilities.isLeftMouseButton(e)) {
-					messages.setText("You take a rope");
-				}
-				
-			}
-		});
-		window.getContentPane().add(btnA);
+	
 		
 	}
 
@@ -218,7 +202,7 @@ public class UI {
 		
 		inventoryPanel =new JPanel();
 		inventoryPanel.setBounds(600,10,300,120);
-		inventoryPanel.setBackground(Color.blue);
+		inventoryPanel.setBackground(Color.black);
 		inventoryPanel.setLayout(new GridLayout(1,3));
 		window.add(inventoryPanel);
 		
@@ -249,7 +233,7 @@ public class UI {
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
-		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Use Rope", "lookblank", "talkBlank","useRope");
+		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Use Rope", "lookCliff", "talkCliff","useRope");
 		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
 		
@@ -257,6 +241,7 @@ public class UI {
 		createBackground(2, "brightfoot21024x800.png");
 		createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
 		createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
+		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Search", "lookCastle", "talkCastle","searchCastle");
 		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[2].add(bgLabel[2]);
 		

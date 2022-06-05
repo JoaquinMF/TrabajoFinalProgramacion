@@ -24,7 +24,7 @@ public class Event01 {
 	}
 
 	public void talkChest() {
-		gm.ui.messages.setText("You approach the chest, and clasp your hands together. Then you recite a pray to the RNG Goddess...");
+		gm.ui.messages.setText("You approach the chest. Then you recite to the RNG Goddess...");
 		
 		
 	}
@@ -44,13 +44,26 @@ public class Event01 {
 	
 	
 	public void talkSeta() {
-		gm.ui.messages.setText("You shout at the mushroom how can be so ugly... you hear a growl in return. Maybe it's offended?");
+		gm.ui.messages.setText("You shout at the mushroom... you hear a growl in return. Maybe it's offended?");
 		
 		
 	}
 	
 	
+	public void lookCliff() {
+		
+		
+	}
 	
+	public void talkCliff() {
+		
+		
+	}
+	
+	public void useRope() {
+		
+		
+	}
 	
 	
 	
