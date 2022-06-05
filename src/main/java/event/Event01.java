@@ -57,7 +57,7 @@ public class Event01 {
 				}else if(gm.player.playerCurrentLife==1) {
 					gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your die.");
 					gm.player.playerCurrentLife--;
-					
+					gm.rChanger.showGameOverScreen(2);
 					
 				}
 			}else if(gm.player.hasWeapon==1) {
@@ -99,6 +99,7 @@ public class Event01 {
 			
 		}else {
 			
+			gm.rChanger.showRegion3();
 			
 		}
 		
