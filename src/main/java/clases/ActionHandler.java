@@ -17,7 +17,8 @@ public class ActionHandler implements ActionListener {
 		String yourChoice = e.getActionCommand();
 
 		switch (yourChoice) {
-
+		
+		//REGION 1
 		case "lookChest": gm.ev1.lookChest(); break;
 		case "openChest": gm.ev1.openChest(); break; //terminar
 		case "talkChest": gm.ev1.talkChest();break;	
@@ -26,7 +27,9 @@ public class ActionHandler implements ActionListener {
 		case "talkSeta": gm.ev1.talkSeta();break;
 		case "lookCliff": gm.ev1.lookCliff();break;
 		case "talkCliff":gm.ev1.talkCliff();break;
+		
 		case "useRope":gm.ev1.useRope();break;
+		//REGION 2
 		case "lookCastle":gm.ev2.lookCastle();break;
 		case "restCastle":gm.ev2.restCastle();break;
 		case "searchCastle":gm.ev2.searchCastle();break;

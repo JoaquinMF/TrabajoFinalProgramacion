@@ -79,16 +79,18 @@ public class Event01 {
 	
 	
 	public void lookCliff() {
-		
+		gm.ui.messages.setText("You look at the cliff in front of You, You can't climb it now, maybe You need something?");
 		
 	}
 	
 	public void talkCliff() {
-		
+		gm.ui.messages.setText("-What in heavens did I get into...");
 		
 	}
 	
 	public void useRope() {
+		
+		
 		
 		
 	}

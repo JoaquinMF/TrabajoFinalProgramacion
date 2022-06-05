@@ -62,8 +62,14 @@ public class Event02 {
 	public void searchCastle() {
 		
 		
+		if(gm.player.hasItem==0) {
+			gm.ui.messages.setText("You search the Castle for a rope. (You obtained rope).");
+			gm.player.hasItem=1;
+			gm.player.updatePlayerStatus();
+		}else {
+			gm.ui.messages.setText("You already searched the Castle... ");
+		}
 		
-		gm.ui.messages.setText("You search the Castle for a rope. (You obtained rope).");
 		
 	}
 
