@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
+import java.awt.Image;
 
 import clases.GameManager;
 import event.Event01;
@@ -50,7 +51,7 @@ public class UI {
 		this.gm = gm;
 
 		createMainField();
-		//createPlayerField();
+		createPlayerField();
 		generateRegion();
 
 		// createBackground();
@@ -62,7 +63,7 @@ public class UI {
 	public void createMainField() {
 
 		window = new JFrame();
-		window.setSize(1100, 960);
+		window.setSize(1100, 990);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
 		window.getContentPane().setLayout(null);
@@ -100,14 +101,14 @@ public class UI {
 	public void createBackground(int bgNum, String bgFileName) {
 
 		bgPanel[bgNum] = new JPanel();
-		bgPanel[bgNum].setBounds(50, 50, 1100, 960);
+		bgPanel[bgNum].setBounds(50, 50, 1100, 990);
 		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
 		//bgPanel[bgNum].setVisible(false);
 		window.getContentPane().add(bgPanel[bgNum]);
 
 		bgLabel[bgNum] = new JLabel();
-		bgLabel[bgNum].setBounds(0, 0, 1100, 960);
+		bgLabel[bgNum].setBounds(0, 0, 1100, 990);
 
 		ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource(bgFileName));
 		bgLabel[bgNum].setIcon(bgIcon);
@@ -195,29 +196,27 @@ public class UI {
 		
 	}
 
-	/*public void createPlayerField() {
+	public void createPlayerField() {
 		
 		lifePanel=new JPanel();
-		lifePanel.setBounds(50,0,250,50);
-		lifePanel.setBackground(Color.blue);
+		lifePanel.setBounds(50, 10, 500, 100);
+		lifePanel.setBackground(null);
 		lifePanel.setLayout(new GridLayout(1,5));
-		
 		window.add(lifePanel);
 		
-		ImageIcon lifeIcon=new ImageIcon(getClass().getClassLoader().getResource("proyectoFinal/res/heartICON100X100.png"));
+		ImageIcon lifeIcon=new ImageIcon(getClass().getClassLoader().getResource("heartICON100X100.png"));
+		
 		
 		short i=1;
-		
 		while(i<6) {
 			
 			lifeLabel[i]=new JLabel();
 			lifeLabel[i].setIcon(lifeIcon);
 			lifePanel.add(lifeLabel[i]);
 			i++;
-			
 		}
 		
-	}*/
+	}
 	
 	public void generateRegion() {
 
