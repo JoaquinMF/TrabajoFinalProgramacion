@@ -43,8 +43,8 @@ public class Event02 {
 	}
 
 	public void lookCastle() {
-
 		
+		gm.ui.messages.setText("You look at the majestic Castle, is too big for a Bicorn though");
 		
 	}
 

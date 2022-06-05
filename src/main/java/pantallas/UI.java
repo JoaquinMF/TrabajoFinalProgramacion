@@ -233,7 +233,7 @@ public class UI {
 		createBackground(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
-		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Use Rope", "lookCliff", "talkCliff","useRope");
+		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Climb Cliff", "lookCliff", "talkCliff","climbCliff");
 		createArrowButton(1,820,270,100,100,"directionArrowICON.png","goRegion2");
 		bgPanel[1].add(bgLabel[1]);
 		
@@ -244,6 +244,15 @@ public class UI {
 		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
 		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[2].add(bgLabel[2]);
+		
+		
+		//REGION 3
+		createBackground(2, "lootbay1024x800.png");
+		//createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
+		//createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
+		//createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
+		//createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
+		bgPanel[3].add(bgLabel[3]);
 		
 		
 	}

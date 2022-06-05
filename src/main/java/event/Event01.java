@@ -67,6 +67,9 @@ public class Event01 {
 		}else {
 			gm.ui.messages.setText("Is already dead.");
 		}
+		
+		gm.player.updatePlayerStatus();
+			
 	}
 }
 	
@@ -79,18 +82,25 @@ public class Event01 {
 	
 	
 	public void lookCliff() {
-		gm.ui.messages.setText("You look at the cliff in front of You, You can't climb it now, maybe You need something?");
+		gm.ui.messages.setText("You look at the cliff in front of You, maybe You need something to climb it?");
 		
 	}
 	
 	public void talkCliff() {
-		gm.ui.messages.setText("-What in heavens did I get into...");
+		gm.ui.messages.setText("You hear the wind pass by...");
 		
 	}
 	
-	public void useRope() {
+	public void climbCliff() {
 		
-		
+		if(gm.player.hasItem==0) {
+			
+			gm.ui.messages.setText("You can't climb the cliff right now.");
+			
+		}else {
+			
+			
+		}
 		
 		
 	}
