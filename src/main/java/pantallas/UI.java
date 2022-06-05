@@ -241,7 +241,7 @@ public class UI {
 		createBackground(2, "brightfoot21024x800.png");
 		createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
 		createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
-		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Search", "lookCastle", "talkCastle","searchCastle");
+		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
 		createArrowButton(2,140,580,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[2].add(bgLabel[2]);
 		
