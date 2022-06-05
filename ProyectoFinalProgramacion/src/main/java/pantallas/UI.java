@@ -50,7 +50,7 @@ public class UI {
 		this.gm = gm;
 
 		createMainField();
-		createPlayerField();
+		//createPlayerField();
 		generateRegion();
 
 		// createBackground();
@@ -195,7 +195,7 @@ public class UI {
 		
 	}
 
-	public void createPlayerField() {
+	/*public void createPlayerField() {
 		
 		lifePanel=new JPanel();
 		lifePanel.setBounds(50,0,250,50);
@@ -217,7 +217,7 @@ public class UI {
 			
 		}
 		
-	}
+	}*/
 	
 	public void generateRegion() {
 
