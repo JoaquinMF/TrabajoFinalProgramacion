@@ -204,7 +204,7 @@ public class UI {
 		
 		window.add(lifePanel);
 		
-		ImageIcon lifeIcon=new ImageIcon(getClass().getClassLoader().getResource("heartICON100X100.png"));
+		ImageIcon lifeIcon=new ImageIcon(getClass().getClassLoader().getResource("proyectoFinal/res/heartICON100X100.png"));
 		
 		short i=1;
 		
