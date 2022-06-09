@@ -28,7 +28,7 @@ public class UI {
 
 	GameManager gm;
 
-	JFrame window;
+	public JFrame window;
 	public JTextArea messages;
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
@@ -42,8 +42,8 @@ public class UI {
 	public JLabel weaponLabel;
 	public JLabel defenseLabel;
 	public JLabel itemLabel;
-	public JLabel itemLabel2;
-	//START AND GAME OVER UI
+	
+	//GAME OVER UI
 	public JLabel gameOverLabel;
 	public JButton restartButton;
 	
@@ -224,18 +224,14 @@ public class UI {
 		ImageIcon itemIcon=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
 		itemLabel.setIcon(itemIcon);
 		inventoryPanel.add(itemLabel);
-		
-		itemLabel2=new JLabel();
-		ImageIcon itemIcon2=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
-		itemLabel2.setIcon(itemIcon2);
-		inventoryPanel.add(itemLabel2);
+	
 		
 		
 	}
 	
 	public void createGameOverField() {
 		
-		gameOverLabel=new JLabel();
+		gameOverLabel=new JLabel("",JLabel.CENTER);
 		gameOverLabel.setBounds(200,150,400,200);
 		gameOverLabel.setForeground(Color.red);
 		gameOverLabel.setFont(new Font("Times new Roman",Font.PLAIN,70));
@@ -282,6 +278,8 @@ public class UI {
 		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Enter", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);
+		
+		//REGION 4
 		
 		
 	}

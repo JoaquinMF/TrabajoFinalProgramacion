@@ -72,5 +72,11 @@ public class RegionChanger {
 		
 	}
 	
+public void showEndScreen(int currentBgNum) {
+		
+	
+	
+	}
+	
 
 }

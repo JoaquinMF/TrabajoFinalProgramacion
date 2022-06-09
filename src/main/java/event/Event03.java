@@ -36,7 +36,6 @@ public class Event03 {
 				}
 			}else if(gm.player.hasWeapon==1) {
 				gm.ui.messages.setText("You attack the Skeleton with your dagger, you have defeated it.");
-				gm.player.hasDefense=1;
 				gm.playSE(gm.skeletonSound2);
 				gm.player.updatePlayerStatus();
 		}else {
@@ -77,7 +76,6 @@ public class Event03 {
 				}
 			}else if(gm.player.hasWeapon==1) {
 				gm.ui.messages.setText("You attack the Skeleton Warrior with your dagger, you have defeated it.");
-				gm.player.hasItem=1;
 				gm.playSE(gm.skeletonSound2);
 				gm.player.updatePlayerStatus();
 		}else {
@@ -104,7 +102,7 @@ public class Event03 {
 	
 	public void enterTemple() {
 		
-		if(gm.player.hasItem2==0) {
+		if(gm.player.hasItem==0) {
 			
 			gm.ui.messages.setText("You can't enter the temple right now, you need a skeleton key.");
 			

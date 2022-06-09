@@ -20,6 +20,8 @@ public class GameManager {
 	Music music = new Music();
 	SE se = new SE();
 	
+	public BattleManager bm= new BattleManager(this);
+	
 	public Event01 ev1=new Event01(this);
 	public Event02 ev2=new Event02(this);
 	public Event03 ev3=new Event03(this);
@@ -50,6 +52,7 @@ public class GameManager {
 		rChanger.showRegion1();
 		player.setPlayerDefaultStatus();
 		
+		//ui.window.setVisible(true);
 	   
 	}
 	
