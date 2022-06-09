@@ -11,10 +11,11 @@ public class Event03 {
 	}
 	
 	public void lookSkeleton1() {
-		if(gm.player.defeatSkeleton1==true) {
-			gm.ui.messages.setText("Already crumbled.");
-		}else {
+		if(gm.player.defeatSkeleton1==false) {
 			gm.ui.messages.setText("You look at the skeleton, seems like a mage, so very smashable.");
+			
+		}else {
+			gm.ui.messages.setText("Already crumbled.");
 		}
 		
 		
@@ -23,30 +24,33 @@ public class Event03 {
 	
 	public void attackSkeleton1() {
 		
-		if(gm.player.defeatSkeleton1==true) {
-			gm.ui.messages.setText("It is already dead...");
+		if(gm.player.defeatSkeleton1==false) {
+			gm.bm.setMonster();
 		}
 		else {
-			gm.bm.setMonster();
+			gm.ui.messages.setText("It is already dead...");
+			
 		}
 }
 	
 	public void talkSkeleton1() {
 		
-		if(gm.player.defeatSkeleton1==true) {
-			gm.ui.messages.setText("Stop talking to dead things.");
-		}else {
+		if(gm.player.defeatSkeleton1==false) {
 			gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
 			gm.playSE(gm.skeletonSound1);
+			
+		}else {
+			gm.ui.messages.setText("Stop talking to dead things.");
 		}
 		
 	}
 	
 	public void lookSkeleton2() {
-		if(gm.player.defeatSkeleton1==true) {
-			gm.ui.messages.setText("Already smashed.");
-		}else {
+		if(gm.player.defeatSkeleton1==false) {
 			gm.ui.messages.setText("You look at the Skeleton Warrior... you're glad you have armor");
+			
+		}else {
+			gm.ui.messages.setText("Already smashed.");
 		}
 		
 
@@ -56,7 +60,7 @@ public class Event03 {
 	
 	public void attackSkeleton2() {
 		
-		if(gm.player.defeatSkeleton1==true) {
+		if(gm.player.defeatSkeleton1==false) {
 			gm.ui.messages.setText("It is already dead...");
 		}
 		else {
@@ -66,11 +70,12 @@ public class Event03 {
 	
 	public void talkSkeleton2() {
 		
-		if(gm.player.defeatSkeleton1==true) {
-			gm.ui.messages.setText("Stop talking to dead things.");
-		}else {
+		if(gm.player.defeatSkeleton1==false) {
 			gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
 			gm.playSE(gm.skeletonSound1);
+			
+		}else {
+			gm.ui.messages.setText("Stop talking to dead things.");
 		}
 		
 	}

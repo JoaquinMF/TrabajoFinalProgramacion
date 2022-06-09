@@ -44,15 +44,14 @@ public class BattleManager {
 		gm.ui.messages.append("You attack the " + monster.monsterName + " and give " + playerDamage + " damage!");
 		monster.monsterLife -= playerDamage;
 		if (monster.monsterLife < 1) {
-			win();
+			
 		} else {
 			int monsterDamage = randomDie.nextInt(monster.monsterAttack) - gm.player.playerDefense;
 			if (monsterDamage < 0) {
 				monsterDamage = 0;
 			}
 			gm.player.playerCurrentLife -= monsterDamage;
-			gm.ui.messages
-					.append("\nThe " + monster.monsterName + " attacks you and give " + monsterDamage + " damage!");
+			gm.ui.messages.append("\nThe " + monster.monsterName + " attacks you and give " + monsterDamage + " damage!");
 			if (gm.player.playerCurrentLife < 1) {
 				gm.player.playerCurrentLife = 0;
 				gm.player.updatePlayerStatus();
@@ -64,34 +63,6 @@ public class BattleManager {
 		gm.playSE(gm.hittedSound);
 	}
 
-	public void win() {
-
-		gm.ui.messages.append("\nYou have defeated the monster!");
-
-		if (monster == mushroom) {
-			gm.player.defeatSeta = true;
-			gm.stopMusic(gm.currentMusic);
-		} else {
-		}
-		
-		if (monster == skeleton1) {
-			gm.player.defeatSkeleton1 = true;
-			gm.stopMusic(gm.currentMusic);
-		} else {
-		}
-		
-		if (monster == skeleton2) {
-			gm.player.defeatSkeleton2 = true;
-			gm.stopMusic(gm.currentMusic);
-		} else {
-		}
-		
-		if (monster == boss) {
-			gm.player.defeatBoss = true;
-			gm.stopMusic(gm.currentMusic);
-		} else {
-		}
-	}
 
 	public void lose() {
 

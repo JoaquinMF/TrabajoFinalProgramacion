@@ -32,7 +32,7 @@ public class UI {
 	public JTextArea messages;
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
-	
+	public JButton choiceB1,choiceB2;
 	//Player UI
 	
 	JPanel lifePanel;
@@ -64,7 +64,7 @@ public class UI {
 
 	public void createMainField() {
 
-		window = new JFrame();
+		window = new JFrame("Awesome Quest");
 		window.setSize(1100, 990);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
@@ -80,19 +80,40 @@ public class UI {
 		messages.setFont(new Font("Gabriola", Font.PLAIN, 24));
 		window.getContentPane().add(messages);
 		
+		choiceB1 = new JButton("Play");
+		choiceB1.setBounds(190,320,200,50);
+		choiceB1.setBackground(new Color(39,67,89));
+		choiceB1.setForeground(new Color(97,195,240));
+		choiceB1.setFocusPainted(false);
+		choiceB1.setFont(new Font("Arial", Font.PLAIN, 17));
+		choiceB1.setVisible(false);
+		window.add(choiceB1);
+		
+		choiceB2 = new JButton("Exit");
+		choiceB2.setBounds(400,320,200,50);
+		choiceB2.setBackground(new Color(39,67,89));
+		choiceB2.setForeground(new Color(97,195,240));
+		choiceB2.setFocusPainted(false);
+		choiceB2.setFont(new Font("Arial", Font.PLAIN, 17));
+		choiceB2.addActionListener(gm.aHandler);
+		choiceB2.setActionCommand("noway");
+		choiceB2.setVisible(false);
+		window.add(choiceB2);
 	
 		
 	}
 
-	public void createBackground(int bgNum, String bgFileName) {
+	public void createBackgroundImage(int bgNum, String bgFileName) {
 
 		bgPanel[bgNum] = new JPanel();
 		bgPanel[bgNum].setBounds(50, 50, 1100, 990);
 		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
 		bgPanel[bgNum].setVisible(false);
-		window.getContentPane().add(bgPanel[bgNum]);
-
+		
+		window.add(bgPanel[bgNum]);
+		
+		
 		bgLabel[bgNum] = new JLabel();
 		bgLabel[bgNum].setBounds(0, 0, 1100, 990);
 
@@ -177,6 +198,7 @@ public class UI {
 		arrowButton.setIcon(arrowIcon);
 		arrowButton.addActionListener(gm.aHandler);
 		arrowButton.setActionCommand(command);
+		arrowButton.setVisible(true);
 		
 		bgPanel[bgNum].add(arrowButton);
 		
@@ -255,7 +277,7 @@ public class UI {
 	public void generateRegion() {
 
 		//REGION 1
-		createBackground(1, "brightfoot1024x800.PNG");
+		createBackgroundImage(1, "brightfoot1024x800.PNG");
 		createObject(1, 750, 690, 200, 84, "chest200x84OBJECT.PNG", "Look", "Open", "Talk", "lookChest", "openChest","talkChest");
 		createObject(1, 550, 490, 130, 274, "seta130x274OBJECT.PNG", "Look", "Talk", "Attack", "lookSeta","talkSeta","attackSeta");
 		createObject(1, 100, 530, 100, 100, "blankICON300X300.png", "Look", "Talk", "Climb Cliff", "lookCliff", "talkCliff","climbCliff");
@@ -263,7 +285,7 @@ public class UI {
 		bgPanel[1].add(bgLabel[1]);
 		
 		//REGION 2
-		createBackground(2, "brightfoot21024x800.png");
+		createBackgroundImage(2, "brightfoot21024x800.png");
 		createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
 		createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
 		createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
@@ -272,9 +294,9 @@ public class UI {
 		
 		
 		//REGION 3
-		createBackground(3, "lootbay1024x800.png");
-		createObject(3, 350, 450, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
-		createObject(3, 770, 450, 300, 517, "skeleton1OBJECT300x517.png", "Look", "Attack", "Talk", "lookSkeleton1", "attackSkeleton1","talkSkeleton1");
+		createBackgroundImage(3, "lootbay1024x800.png");
+		createObject(3, 550, 350, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
+		createObject(3, 170, 150, 300, 517, "skeleton1OBJECT300x517.png", "Look", "Attack", "Talk", "lookSkeleton1", "attackSkeleton1","talkSkeleton1");
 		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Enter", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);

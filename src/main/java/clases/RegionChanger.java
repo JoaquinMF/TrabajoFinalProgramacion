@@ -72,10 +72,16 @@ public class RegionChanger {
 		
 	}
 	
-public void showEndScreen(int currentBgNum) {
+	public void showEndScreen(int currentBgNum) {
 		
-	
-	
+		gm.ui.bgPanel[currentBgNum].setVisible(false);
+		//gm.ui.titleLabel.setVisible(true);
+		//gm.ui.titleLabel.setText("Congratz!");
+		gm.ui.messages.setText("You have completed the Awesome Quest III!\nThanks for playing!");
+
+		
+		gm.stopMusic(gm.regionMusic4);
+
 	}
 	
 
