@@ -1,5 +1,7 @@
 package clases;
 
+import java.net.URL;
+
 import event.Event01;
 import event.Event02;
 import event.Event03;
@@ -15,12 +17,32 @@ public class GameManager {
 	
 	public RegionChanger rChanger=new RegionChanger(this);
 
+	Music music = new Music();
+	SE se = new SE();
+	
 	public Event01 ev1=new Event01(this);
 	public Event02 ev2=new Event02(this);
 	public Event03 ev3=new Event03(this);
 	
+	// SOUND
+	
+	public URL regionMusic = getClass().getClassLoader().getResource("audio//region1.wav");
+	public URL regionMusic2 = getClass().getClassLoader().getResource("audio//region2.wav");
+	public URL regionMusic3 = getClass().getClassLoader().getResource("audio//region3.wav");
+	public URL regionMusic4 = getClass().getClassLoader().getResource("audio//region4.wav");
+	public URL setaSound = getClass().getClassLoader().getResource("audio//setaSound.wav");
+	public URL skeletonSound1 = getClass().getClassLoader().getResource("audio//skeletonSound1.wav");
+	public URL skeletonSound2 = getClass().getClassLoader().getResource("audio//setaSound.wav");
+	public URL mikeSound = getClass().getClassLoader().getResource("audio//skeletonSound12.wav");
+	public URL queenSound = getClass().getClassLoader().getResource("audio//queenSound.wav");
+	public URL bossSound = getClass().getClassLoader().getResource("audio//bossSound.wav");
+	
+	public URL currentMusic;
+	
 	public GameManager() {
 		
+		currentMusic = regionMusic;
+		playMusic(currentMusic);
 		
 		rChanger.showRegion1();
 		player.setPlayerDefaultStatus();
@@ -29,4 +51,26 @@ public class GameManager {
 	}
 	
 
+	public void playSE(URL url) {
+		
+		se.setFile(url);
+		se.play(url);
+		
+	}
+	
+	
+	public void playMusic(URL url) {
+		
+		music.setFile(url);
+		music.play(url);
+		music.loop(url);
+		
+	}
+	
+	public void stopMusic(URL url) {
+		
+		music.stop(url);
+		
+	}
+	
 }

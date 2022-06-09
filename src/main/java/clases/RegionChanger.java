@@ -17,6 +17,10 @@ public class RegionChanger {
 		gm.ui.bgPanel[3].setVisible(false);
 		gm.ui.messages.setText(
 				"You arrive to Brightfoot, capital of the Wonderlands. Approaching it's gate, you start to hear screams and see scattered destruction. You focus your attention in the chest and mutant mushroom in front of You.");
+	
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.regionMusic;
+		gm.playMusic(gm.currentMusic);
 	}
 
 	public void showRegion2() {
@@ -27,6 +31,10 @@ public class RegionChanger {
 		gm.ui.messages.setText(
 				"You wandered around, until You found the main plaza... there, you spot a guard, and the majestuous ruler of the Wonderlands, Her Esteemed Queen Buttstallion, they look at You..");
 
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.regionMusic2;
+		gm.playMusic(gm.currentMusic);
+	
 	}
 
 	public void showRegion3() {
@@ -37,6 +45,10 @@ public class RegionChanger {
 		gm.ui.messages.setText(
 				"After you climb the cliff, you see a city in a bay, full off pirates, your objetive is in the emple at the end of the city.");
 
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.regionMusic3;
+		gm.playMusic(gm.currentMusic);
+	
 	}
 
 	public void showGameOverScreen(int currentBgNum) {
@@ -46,6 +58,9 @@ public class RegionChanger {
 		gm.ui.gameOverLabel.setText("YOU DIED");
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Start again");
+		
+		gm.stopMusic(gm.currentMusic);
+		
 		
 	}
 	
