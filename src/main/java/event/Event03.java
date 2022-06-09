@@ -11,47 +11,44 @@ public class Event03 {
 	}
 	
 	public void lookSkeleton1() {
-		gm.ui.messages.setText("You look at the skeleton, seems like a mage, so very smashable.");
-
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("Already crumbled.");
+		}else {
+			gm.ui.messages.setText("You look at the skeleton, seems like a mage, so very smashable.");
+		}
+		
 		
 	}
 	
 	
 	public void attackSkeleton1() {
 		
-		if(gm.player.hasDefense==0) {
-			if(gm.player.hasWeapon==0) {
-				if(gm.player.playerCurrentLife!=1) {
-				gm.ui.messages.setText("You don't have any weapon, the Skeleton attacks you, your life decreases by 1.");
-				gm.playSE(gm.hittedSound);
-				gm.player.playerCurrentLife--;
-				gm.player.updatePlayerStatus();
-				
-				}else if(gm.player.playerCurrentLife==1) {
-					gm.ui.messages.setText("You don't have any weapon, the Skeleton attacks you, your die.");
-					gm.player.playerCurrentLife--;
-					gm.player.updatePlayerStatus();
-					gm.rChanger.showGameOverScreen(1);
-					
-				}
-			}else if(gm.player.hasWeapon==1) {
-				gm.ui.messages.setText("You attack the Skeleton with your dagger, you have defeated it.");
-				gm.playSE(gm.skeletonSound2);
-				gm.player.updatePlayerStatus();
-		}else {
-			gm.ui.messages.setText("Is already dead.");
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("It is already dead...");
 		}
-	}
+		else {
+			gm.bm.setMonster();
+		}
 }
 	
 	public void talkSkeleton1() {
-		gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
-		gm.playSE(gm.skeletonSound1);
+		
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("Stop talking to dead things.");
+		}else {
+			gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
+			gm.playSE(gm.skeletonSound1);
+		}
 		
 	}
 	
 	public void lookSkeleton2() {
-		gm.ui.messages.setText("You look at the Skeleton Warrior... you're glad you have armor");
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("Already smashed.");
+		}else {
+			gm.ui.messages.setText("You look at the Skeleton Warrior... you're glad you have armor");
+		}
+		
 
 		
 	}
@@ -59,34 +56,22 @@ public class Event03 {
 	
 	public void attackSkeleton2() {
 		
-		if(gm.player.hasDefense==0) {
-			if(gm.player.hasWeapon==0) {
-				if(gm.player.playerCurrentLife!=1) {
-				gm.ui.messages.setText("You don't have any weapon, the Skeleton attacks you, your life decreases by 1.");
-				gm.playSE(gm.hittedSound);
-				gm.player.playerCurrentLife--;
-				gm.player.updatePlayerStatus();
-				
-				}else if(gm.player.playerCurrentLife==1) {
-					gm.ui.messages.setText("You don't have any weapon, the Skeleton attacks you, your die.");
-					gm.player.playerCurrentLife--;
-					gm.player.updatePlayerStatus();
-					gm.rChanger.showGameOverScreen(1);
-					
-				}
-			}else if(gm.player.hasWeapon==1) {
-				gm.ui.messages.setText("You attack the Skeleton Warrior with your dagger, you have defeated it.");
-				gm.playSE(gm.skeletonSound2);
-				gm.player.updatePlayerStatus();
-		}else {
-			gm.ui.messages.setText("Is already dead.");
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("It is already dead...");
 		}
-	}
+		else {
+			gm.bm.setMonster();
+		}
 }
 	
 	public void talkSkeleton2() {
-		gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
-		gm.playSE(gm.skeletonSound1);
+		
+		if(gm.player.defeatSkeleton1==true) {
+			gm.ui.messages.setText("Stop talking to dead things.");
+		}else {
+			gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
+			gm.playSE(gm.skeletonSound1);
+		}
 		
 	}
 	

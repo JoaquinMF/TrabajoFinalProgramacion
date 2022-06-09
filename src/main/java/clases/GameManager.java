@@ -46,13 +46,15 @@ public class GameManager {
 	
 	public GameManager() {
 		
+		//SET MUSIC
 		currentMusic = regionMusic;
 		playMusic(currentMusic);
 		
+		//SET REGION
 		rChanger.showRegion1();
 		player.setPlayerDefaultStatus();
 		
-		//ui.window.setVisible(true);
+		ui.window.setVisible(true);
 	   
 	}
 	

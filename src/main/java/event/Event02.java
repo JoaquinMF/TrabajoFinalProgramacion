@@ -56,6 +56,10 @@ public class Event02 {
 	}
 
 	public void restCastle() {
+		if(gm.player.defeatBoss==true) {
+			gm.rChanger.showEndScreen(2);
+		}else {
+		
 		if(gm.player.playerCurrentLife!=gm.player.playerMaxLife) {
 			gm.ui.messages.setText("You rest in a room You found(Your life has recovered)");
 			gm.player.playerCurrentLife++;
@@ -63,10 +67,12 @@ public class Event02 {
 			gm.playSE(gm.healSound);
 			
 		}else {
+			
 			gm.ui.messages.setText("You are rested. (Your life is full)");
 		}
 
 	}
+}
 
 	public void searchCastle() {
 		

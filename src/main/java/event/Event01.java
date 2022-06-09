@@ -40,44 +40,36 @@ public class Event01 {
 	}
 	
 	public void lookSeta() {
+		if(gm.player.defeatSeta==true) {
+			gm.ui.messages.setText("It's already dead");
+		}else {
+		
 		gm.ui.messages.setText("You look at the mutant mushroom, you can't help but scream who let that abomination in.");
-
+		}
 		
 	}
 	
 	
 	public void attackSeta() {
 		
-		if(gm.player.hasDefense==0) {
-			if(gm.player.hasWeapon==0) {
-				if(gm.player.playerCurrentLife!=1) {
-				gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your life decreases by 1.");
-				gm.playSE(gm.hittedSound);
-				gm.player.playerCurrentLife--;
-				gm.player.updatePlayerStatus();
-				
-				}else if(gm.player.playerCurrentLife==1) {
-					gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your die.");
-					gm.player.playerCurrentLife--;
-					gm.player.updatePlayerStatus();
-					gm.rChanger.showGameOverScreen(1);
-					
-				}
-			}else if(gm.player.hasWeapon==1) {
-				gm.ui.messages.setText("You attack the mushroom with your dagger, you have defeated it.");
-				gm.player.hasDefense=1;
-				gm.playSE(gm.hitSound);
-				gm.player.updatePlayerStatus();
-		}else {
-			gm.ui.messages.setText("Is already dead.");
+		if(gm.player.defeatSeta==true) {
+			gm.ui.messages.setText("It is already dead...");
 		}
-	}
+		else {
+			gm.bm.setMonster();
+		}
 }
 	
 	
 	public void talkSeta() {
-		gm.ui.messages.setText("You shout at the mushroom... you hear a growl in return. Maybe it's offended?");
-		gm.playSE(gm.setaSound);
+		
+		if(gm.player.defeatSeta==true) {
+			gm.ui.messages.setText("Why talk to a dead monster?");
+			
+		}else {
+			gm.ui.messages.setText("You shout at the mushroom... you hear a growl in return. Maybe it's offended?");
+			gm.playSE(gm.setaSound);
+		}			
 		
 	}
 	
