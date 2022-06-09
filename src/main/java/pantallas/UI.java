@@ -90,7 +90,7 @@ public class UI {
 		bgPanel[bgNum].setBounds(50, 50, 1100, 990);
 		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
-		//bgPanel[bgNum].setVisible(false);
+		bgPanel[bgNum].setVisible(false);
 		window.getContentPane().add(bgPanel[bgNum]);
 
 		bgLabel[bgNum] = new JLabel();
