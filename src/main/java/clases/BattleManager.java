@@ -6,7 +6,7 @@ public class BattleManager {
 
 	GameManager gm;
 	Monster monster;
-	Seta seta = new Seta();
+	Seta mushroom = new Seta();
 	Skeleton1 skeleton1 = new Skeleton1();
 	Skeleton2 skeleton2 = new Skeleton2();
 	Boss boss = new Boss();
@@ -20,14 +20,14 @@ public class BattleManager {
 
 	public void resetMonsterLife() {
 		// add all the monsters if needed
-		seta.monsterLife = seta.monsterMaxLife;
+		mushroom.monsterLife = mushroom.monsterMaxLife;
 		skeleton1.monsterLife = skeleton1.monsterMaxLife;
 		skeleton2.monsterLife = skeleton2.monsterMaxLife;
 		boss.monsterLife = boss.monsterMaxLife;
 	}
 
 	public void setMonster() {
-		monster = seta;
+		monster = mushroom;
 		monster = skeleton1;
 		monster = skeleton2;
 		monster = boss;
@@ -68,7 +68,7 @@ public class BattleManager {
 
 		gm.ui.messages.append("\nYou have defeated the monster!");
 
-		if (monster == seta) {
+		if (monster == mushroom) {
 			gm.player.defeatSeta = true;
 			gm.stopMusic(gm.currentMusic);
 		} else {

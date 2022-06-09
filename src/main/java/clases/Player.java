@@ -1,26 +1,12 @@
 package clases;
 
-public class Player {
+public class Player extends EntityStatsAndItems {
 	
 	GameManager gm;
 	
-	public short playerMaxLife;
-	public short playerCurrentLife;
-	public int playerStrength = 3;
-	public int playerEndurance = 1;
-	public int playerAttack;
-	public int playerDefense;
 	
-	public short hasWeapon;
-	public short hasDefense;
-	public short hasItem;
-	public int weaponPower;
-	public int defensePower;
 	
-	public boolean defeatSeta = false;
-	public boolean defeatSkeleton1 = false;
-	public boolean defeatSkeleton2 = false;
-	public boolean defeatBoss = false;
+	
 	
 	public Player(GameManager gm) {
 		
@@ -32,8 +18,8 @@ public class Player {
 		
 		playerMaxLife = 5;
 		playerCurrentLife = 3;
-		playerStrength = 3;
-		playerEndurance = 1;
+		playerStrength = 5;
+		playerEndurance = 0;
 		
 		hasWeapon=0;
 		hasDefense=0;
