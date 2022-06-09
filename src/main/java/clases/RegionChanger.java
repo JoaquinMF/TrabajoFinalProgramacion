@@ -60,7 +60,7 @@ public class RegionChanger {
 		gm.ui.restartButton.setText("Start again");
 		
 		gm.stopMusic(gm.currentMusic);
-		
+		gm.playSE(gm.deadSound);
 		
 	}
 	
@@ -69,6 +69,7 @@ public class RegionChanger {
 		gm.ui.gameOverLabel.setVisible(false);
 		gm.ui.restartButton.setVisible(false);
 		gm.player.setPlayerDefaultStatus();
+		
 	}
 	
 

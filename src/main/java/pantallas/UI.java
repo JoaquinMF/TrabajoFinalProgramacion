@@ -273,9 +273,9 @@ public class UI {
 		
 		//REGION 3
 		createBackground(3, "lootbay1024x800.png");
-		//createObject(2, 350, 450, 128, 327, "captainMike600x400OBJECT.png", "Look", "Attack", "Talk", "lookMike", "attackMike","talkMike");
-		//createObject(2, 770, 450, 250, 386, "buttStallion600x400OBJECT.png", "Look", "Attack", "Talk", "lookButtstallion", "attackButtstallion","talkButtstallion");
-		//createObject(2, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookCastle", "restCastle","searchCastle");
+		createObject(3, 350, 450, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
+		createObject(3, 770, 450, 300, 517, "skeleton1OBJECT300x517.png", "Look", "Attack", "Talk", "lookSkeleton1", "attackSkeleton1","talkSkeleton1");
+		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);
 		

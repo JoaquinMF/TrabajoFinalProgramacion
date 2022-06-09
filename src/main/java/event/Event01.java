@@ -24,6 +24,7 @@ public class Event01 {
 			gm.ui.messages.setText("You plunder the ol' sweet loot.\n(You take the shiny dagger inside... )");
 			gm.player.hasWeapon=1;
 			gm.player.updatePlayerStatus();
+			gm.playSE(gm.healSound);
 		}else {
 			gm.ui.messages.setText("You already looted the chest... ");
 		}
@@ -51,6 +52,7 @@ public class Event01 {
 			if(gm.player.hasWeapon==0) {
 				if(gm.player.playerCurrentLife!=1) {
 				gm.ui.messages.setText("You don't have any weapon, the mushroom attacks you, your life decreases by 1.");
+				gm.playSE(gm.hittedSound);
 				gm.player.playerCurrentLife--;
 				gm.player.updatePlayerStatus();
 				
@@ -64,6 +66,7 @@ public class Event01 {
 			}else if(gm.player.hasWeapon==1) {
 				gm.ui.messages.setText("You attack the mushroom with your dagger, you have defeated it.");
 				gm.player.hasDefense=1;
+				gm.playSE(gm.hitSound);
 				gm.player.updatePlayerStatus();
 		}else {
 			gm.ui.messages.setText("Is already dead.");
@@ -74,7 +77,7 @@ public class Event01 {
 	
 	public void talkSeta() {
 		gm.ui.messages.setText("You shout at the mushroom... you hear a growl in return. Maybe it's offended?");
-		
+		gm.playSE(gm.setaSound);
 		
 	}
 	
@@ -97,7 +100,7 @@ public class Event01 {
 			
 		}else {
 			
-			
+			gm.rChanger.showRegion3();
 		}
 		
 		

@@ -19,11 +19,17 @@ public class Event02 {
 
 	public void attackMike() {
 		gm.ui.messages.setText("-What are you doing? stop.");
-
+		gm.player.playerCurrentLife--;
+		gm.player.updatePlayerStatus();
+		
+		gm.playSE(gm.hittedSound);
+		
 	}
 
 	public void talkMike() {
 		gm.ui.messages.setText("-Hello there, thanks for your help...");
+		
+		
 
 	}
 
@@ -39,7 +45,8 @@ public class Event02 {
 
 	public void talkButtstallion() {
 		gm.ui.messages.setText("Hello noble Adventure, please, search the Castle for a Rope, and continue to the west where the Mushroom was...");
-
+		
+		
 	}
 
 	public void lookCastle() {
@@ -53,6 +60,8 @@ public class Event02 {
 			gm.ui.messages.setText("You rest in a room You found(Your life has recovered)");
 			gm.player.playerCurrentLife++;
 			gm.player.updatePlayerStatus();
+			gm.playSE(gm.healSound);
+			
 		}else {
 			gm.ui.messages.setText("You are rested. (Your life is full)");
 		}
@@ -66,6 +75,8 @@ public class Event02 {
 			gm.ui.messages.setText("You search the Castle for a rope. (You obtained rope).");
 			gm.player.hasItem=1;
 			gm.player.updatePlayerStatus();
+			gm.playSE(gm.healSound);
+			
 		}else {
 			gm.ui.messages.setText("You already searched the Castle... ");
 		}

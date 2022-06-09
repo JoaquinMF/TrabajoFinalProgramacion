@@ -10,6 +10,7 @@ public class Player {
 	public short hasWeapon;
 	public short hasDefense;
 	public short hasItem;
+	public short hasItem2;
 	
 	public Player(GameManager gm) {
 		
@@ -71,6 +72,13 @@ public class Player {
 			gm.ui.itemLabel.setVisible(true);
 		}
 		
+		if(hasItem2==0) {
+			gm.ui.itemLabel.setVisible(false);
+		}
+		
+		if(hasItem2==1) {
+			gm.ui.itemLabel.setVisible(true);
+		}
 		
 	}
 	
