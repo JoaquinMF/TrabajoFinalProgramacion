@@ -42,7 +42,7 @@ public class UI {
 	public JLabel weaponLabel;
 	public JLabel defenseLabel;
 	public JLabel itemLabel;
-	
+	public JLabel itemLabel2;
 	//START AND GAME OVER UI
 	public JLabel gameOverLabel;
 	public JButton restartButton;
@@ -225,6 +225,10 @@ public class UI {
 		itemLabel.setIcon(itemIcon);
 		inventoryPanel.add(itemLabel);
 		
+		itemLabel2=new JLabel();
+		ImageIcon itemIcon2=new ImageIcon(getClass().getClassLoader().getResource("ropeICON100x100.png"));
+		itemLabel2.setIcon(itemIcon2);
+		inventoryPanel.add(itemLabel2);
 		
 		
 	}
@@ -275,7 +279,7 @@ public class UI {
 		createBackground(3, "lootbay1024x800.png");
 		createObject(3, 350, 450, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
 		createObject(3, 770, 450, 300, 517, "skeleton1OBJECT300x517.png", "Look", "Attack", "Talk", "lookSkeleton1", "attackSkeleton1","talkSkeleton1");
-		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Rest", "Search", "lookTemple", "talkTemple","enterTemple");
+		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Enter", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);
 		

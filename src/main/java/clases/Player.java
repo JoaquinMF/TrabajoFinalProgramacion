@@ -72,13 +72,6 @@ public class Player {
 			gm.ui.itemLabel.setVisible(true);
 		}
 		
-		if(hasItem2==0) {
-			gm.ui.itemLabel.setVisible(false);
-		}
-		
-		if(hasItem2==1) {
-			gm.ui.itemLabel.setVisible(true);
-		}
 		
 	}
 	
