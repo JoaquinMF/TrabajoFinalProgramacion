@@ -6,8 +6,8 @@ public class BattleManager {
 
 	GameManager gm;
 	Monster monster;
-	Seta mushroom = new Seta();
-	Skeleton1 skeleton1 = new Skeleton1();
+	Seta seta = new Seta();
+	Skeleton2 skeleton2 = new Skeleton2();
 	Boss boss = new Boss();
 
 	Random randomDie = new Random();
@@ -19,14 +19,14 @@ public class BattleManager {
 
 	public void resetMonsterLife() {
 		// add all the monsters if needed
-		mushroom.monsterLife = mushroom.monsterMaxLife;
-		skeleton1.monsterLife = skeleton1.monsterMaxLife;
-		boss.monsterLife = boss.monsterMaxLife;
+		seta.monsterCurrentLife = seta.monsterMaxLife;
+		skeleton2.monsterCurrentLife = skeleton2.monsterMaxLife;
+		boss.monsterCurrentLife = boss.monsterMaxLife;
 	}
 
 	public void setMonster() {
-		monster = mushroom;
-		monster = skeleton1;
+		monster = seta;
+		monster = skeleton2;
 		monster = boss;
 		attack();
 	}
@@ -39,12 +39,17 @@ public class BattleManager {
 		}
 		gm.ui.messages.setText("");
 		gm.ui.messages.append("You attack the " + monster.monsterName + " and give " + playerDamage + " damage!");
-		monster.monsterLife -= playerDamage;
-		if (monster.monsterLife < 1) {
-			
+		
+		monster.monsterCurrentLife -= playerDamage;
+		
+		if (monster.monsterCurrentLife < 1) {
+
 		} else {
+			
 			int monsterDamage = randomDie.nextInt(monster.monsterAttack) - gm.player.playerDefense;
+			
 			if (monsterDamage < 0) {
+				
 				monsterDamage = 0;
 			}
 			gm.player.playerCurrentLife -= monsterDamage;
@@ -59,7 +64,6 @@ public class BattleManager {
 		}
 		gm.playSE(gm.hittedSound);
 	}
-
 
 	public void lose() {
 
