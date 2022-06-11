@@ -20,7 +20,7 @@ public class ActionHandler implements ActionListener {
 		
 		//REGION 1
 		case "lookChest": gm.ev1.lookChest(); break;
-		case "openChest": gm.ev1.openChest(); break; //terminar
+		case "openChest": gm.ev1.openChest(); break;
 		case "talkChest": gm.ev1.talkChest();break;	
 		case "lookSeta": gm.ev1.lookSeta();break;
 		case "attackSeta": gm.ev1.attackSeta();break;

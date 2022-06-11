@@ -4,9 +4,9 @@ public class Seta extends Monster{
 	
 	public Seta() {
 	monsterName = "Mushroom";
-	monsterMaxLife = 2;
-	monsterLife = 2;
-	monsterAttack = 2; 
+	monsterMaxLife = 1;
+	monsterLife = 1;
+	monsterAttack = 1; 
 	monsterDefense = 1;
 
   }
