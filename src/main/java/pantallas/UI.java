@@ -296,12 +296,15 @@ public class UI {
 		//REGION 3
 		createBackgroundImage(3, "lootbay1024x800.png");
 		createObject(3, 550, 350, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
-		createObject(3, 170, 150, 300, 517, "skeleton1OBJECT300x517.png", "Look", "Attack", "Talk", "lookSkeleton1", "attackSkeleton1","talkSkeleton1");
 		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Enter", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);
 		
 		//REGION 4
+		createBackgroundImage(4, "temple1024x800.png");
+		createObject(4, 550, 350, 435, 346, "bossICON500x405.png", "Look", "Attack", "Talk", "lookBoss", "attackBoss","talkBoss");
+		createArrowButton(4,900,780,100,100,"directionArrowICON.png","goRegion3");
+		bgPanel[4].add(bgLabel[4]);
 		
 		
 	}

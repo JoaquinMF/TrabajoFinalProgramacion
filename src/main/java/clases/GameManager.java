@@ -34,7 +34,6 @@ public class GameManager {
 	public URL regionMusic4 = getClass().getClassLoader().getResource("audio//region4.wav");
 	public URL setaSound = getClass().getClassLoader().getResource("audio//setaSound.wav");
 	public URL skeletonSound1 = getClass().getClassLoader().getResource("audio//skeletonSound1.wav");
-	public URL skeletonSound2 = getClass().getClassLoader().getResource("audio//skeletonSound2.wav");
 	public URL bossSound = getClass().getClassLoader().getResource("audio//bossSound.wav");
 	public URL deadSound = getClass().getClassLoader().getResource("audio//deadSound.wav");
 	public URL hitSound = getClass().getClassLoader().getResource("audio//hitSound.wav");

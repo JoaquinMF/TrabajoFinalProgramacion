@@ -8,7 +8,6 @@ public class BattleManager {
 	Monster monster;
 	Seta mushroom = new Seta();
 	Skeleton1 skeleton1 = new Skeleton1();
-	Skeleton2 skeleton2 = new Skeleton2();
 	Boss boss = new Boss();
 
 	Random randomDie = new Random();
@@ -22,14 +21,12 @@ public class BattleManager {
 		// add all the monsters if needed
 		mushroom.monsterLife = mushroom.monsterMaxLife;
 		skeleton1.monsterLife = skeleton1.monsterMaxLife;
-		skeleton2.monsterLife = skeleton2.monsterMaxLife;
 		boss.monsterLife = boss.monsterMaxLife;
 	}
 
 	public void setMonster() {
 		monster = mushroom;
 		monster = skeleton1;
-		monster = skeleton2;
 		monster = boss;
 		attack();
 	}

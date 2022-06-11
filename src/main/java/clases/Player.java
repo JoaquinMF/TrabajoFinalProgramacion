@@ -24,12 +24,11 @@ public class Player extends EntityStatsAndItems {
 		hasWeapon=0;
 		hasDefense=0;
 		hasItem=0;
-		weaponPower=0;
-		defensePower=0;
+		weaponPower=1;
+		defensePower=1;
 		
 		defeatSeta = false;
 		defeatSkeleton1 = false;
-		defeatSkeleton2 = false;
 		defeatBoss = false;
 		updatePlayerStatus();
 		
@@ -45,6 +44,7 @@ public class Player extends EntityStatsAndItems {
 		}
 		
 		short lifeCount=playerCurrentLife;
+		
 		while(lifeCount!=0) {
 			gm.ui.lifeLabel[lifeCount].setVisible(true);
 			lifeCount--;

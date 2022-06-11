@@ -15,9 +15,8 @@ public class EntityStatsAndItems {
 	public int weaponPower;
 	public int defensePower;
 	
-	public boolean defeatSeta = false;
-	public boolean defeatSkeleton1 = false;
-	public boolean defeatSkeleton2 = false;
-	public boolean defeatBoss = false;
+	public boolean defeatSeta;
+	public boolean defeatSkeleton1;
+	public boolean defeatBoss;
 
 }

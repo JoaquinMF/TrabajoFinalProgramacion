@@ -48,7 +48,7 @@ public class SE {
 		clip.loop(Clip.LOOP_CONTINUOUSLY);
 
 	}
-
+	
 	public void stop(URL name) {
 
 		clip.stop();
