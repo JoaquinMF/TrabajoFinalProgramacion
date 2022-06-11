@@ -4,8 +4,8 @@ public class Monster {
 
 	
 	public String monsterName;
-	public int monsterLife;
-	public int monsterAttack;
-	public int monsterDefense;
+	public short monsterLife;
+	public short monsterAttack;
+	public short monsterDefense;
 
 }

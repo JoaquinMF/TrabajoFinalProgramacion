@@ -32,7 +32,7 @@ public class UI {
 	public JTextArea messages;
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
-	public JButton choiceB1,choiceB2;
+	
 	//Player UI
 	
 	JPanel lifePanel;
