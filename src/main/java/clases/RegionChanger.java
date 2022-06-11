@@ -93,8 +93,7 @@ public class RegionChanger {
 		gm.ui.bgPanel[currentBgNum].setVisible(false);
 		//gm.ui.titleLabel.setVisible(true);
 		//gm.ui.titleLabel.setText("Congratz!");
-		gm.ui.messages.setText("You have completed the Awesome Quest III!\nThanks for playing!");
-		
+		gm.ui.messages.setText("Congratulations, YOU WON! Thanks for playing!");
 		gm.stopMusic(gm.regionMusic4);
 
 	}

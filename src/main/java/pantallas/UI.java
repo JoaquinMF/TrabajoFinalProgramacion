@@ -80,25 +80,6 @@ public class UI {
 		messages.setFont(new Font("Gabriola", Font.PLAIN, 24));
 		window.getContentPane().add(messages);
 		
-		choiceB1 = new JButton("Play");
-		choiceB1.setBounds(190,320,200,50);
-		choiceB1.setBackground(new Color(39,67,89));
-		choiceB1.setForeground(new Color(97,195,240));
-		choiceB1.setFocusPainted(false);
-		choiceB1.setFont(new Font("Arial", Font.PLAIN, 17));
-		choiceB1.setVisible(false);
-		window.add(choiceB1);
-		
-		choiceB2 = new JButton("Exit");
-		choiceB2.setBounds(400,320,200,50);
-		choiceB2.setBackground(new Color(39,67,89));
-		choiceB2.setForeground(new Color(97,195,240));
-		choiceB2.setFocusPainted(false);
-		choiceB2.setFont(new Font("Arial", Font.PLAIN, 17));
-		choiceB2.addActionListener(gm.aHandler);
-		choiceB2.setActionCommand("noway");
-		choiceB2.setVisible(false);
-		window.add(choiceB2);
 	
 		
 	}
@@ -305,6 +286,8 @@ public class UI {
 		createObject(4, 550, 350, 435, 346, "bossICON500x405.png", "Look", "Attack", "Talk", "lookBoss", "attackBoss","talkBoss");
 		createArrowButton(4,900,780,100,100,"directionArrowICON.png","goRegion3");
 		bgPanel[4].add(bgLabel[4]);
+		
+		//End Screen
 		
 		
 	}

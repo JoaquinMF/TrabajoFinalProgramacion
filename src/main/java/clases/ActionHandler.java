@@ -39,13 +39,16 @@ public class ActionHandler implements ActionListener {
 		case "attackButtstallion": gm.ev2.attackButtstallion();break;
 		case "talkButtstallion": gm.ev2.talkButtstallion();break;
 		//REGION 3
-		case "lookSkeleton1": gm.ev3.lookSkeleton1();break;
-		case "attackSkeleton1":gm.ev3.attackSkeleton1();break;
+		case "lookSkeleton2": gm.ev3.lookSkeleton2();break;
+		case "attackSkeleton2":gm.ev3.attackSkeleton2();break;
+		case "talkSkeleton2": gm.ev3.talkSkeleton2();break;
 		case "lookTemple": gm.ev3.lookTemple();break;
 		case "talkTemple":gm.ev3.talkTemple();break;
 		case "enterTemple":gm.ev3.enterTemple();break;
-		
-		
+		//REGION 4
+		case "lookBoss": gm.ev4.lookBoss();break;
+		case "attackBoss": gm.ev4.attackBoss();break;
+		case "talkBoss": gm.ev4.talkBoss();break;
 		
 		//Change Region
 		

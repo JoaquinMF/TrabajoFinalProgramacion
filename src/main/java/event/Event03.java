@@ -10,7 +10,7 @@ public class Event03 {
 		this.gm = gm;
 	}
 
-	public void lookSkeleton1() {
+	public void lookSkeleton2() {
 		if (gm.player.defeatSkeleton1 == false) {
 			gm.ui.messages.setText("You look at the skeleton, seems like a mage, so very smashable.");
 
@@ -20,7 +20,7 @@ public class Event03 {
 
 	}
 
-	public void attackSkeleton1() {
+	public void attackSkeleton2() {
 
 		if (gm.player.defeatSkeleton1 == false) {
 			gm.bm.setMonster();
@@ -30,7 +30,7 @@ public class Event03 {
 		}
 	}
 
-	public void talkSkeleton1() {
+	public void talkSkeleton2() {
 
 		if (gm.player.defeatSkeleton1 == false) {
 			gm.ui.messages.setText("You shout at the skeleton... you hear bones rattling");
