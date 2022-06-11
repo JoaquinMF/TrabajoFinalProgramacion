@@ -6,8 +6,6 @@ public class Player extends EntityStatsAndItems {
 	
 	
 	
-	
-	
 	public Player(GameManager gm) {
 		
 		this.gm=gm;
@@ -18,23 +16,23 @@ public class Player extends EntityStatsAndItems {
 		
 		playerMaxLife = 5;
 		playerCurrentLife = 3;
-		playerStrength = 5;
-		playerEndurance = 0;
-		
+	
 		hasWeapon=0;
 		hasDefense=0;
 		hasItem=0;
-		weaponPower=1;
-		defensePower=1;
+		weaponPower=0;
+		defensePower=0;
 		
 		defeatSeta = false;
-		defeatSkeleton1 = false;
+		defeatSkeleton2 = false;
 		defeatBoss = false;
 		updatePlayerStatus();
 		
 	}
 	
 	public void updatePlayerStatus() {
+
+
 		
 		//REMOVE ALL LIFE ICON
 		short i=1;
@@ -50,24 +48,28 @@ public class Player extends EntityStatsAndItems {
 			lifeCount--;
 		}
 		
-		playerAttack = playerStrength + weaponPower;
-		playerDefense = playerEndurance + defensePower;
+	
 		
 		//CHECK PLAYER ITEMS
 		
 		if(hasWeapon==0) {
+			weaponPower=0;
+			
 			gm.ui.weaponLabel.setVisible(false);
 		}
 		
 		if(hasWeapon==1) {
+			weaponPower=3;
 			gm.ui.weaponLabel.setVisible(true);
 		}
 		
 		if(hasDefense==0) {
+			defensePower=0;
 			gm.ui.defenseLabel.setVisible(false);
 		}
 		
 		if(hasDefense==1) {
+			defensePower=1;
 			gm.ui.defenseLabel.setVisible(true);
 		}
 		

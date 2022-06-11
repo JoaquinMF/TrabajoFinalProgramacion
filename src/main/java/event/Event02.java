@@ -57,7 +57,7 @@ public class Event02 {
 
 	public void restCastle() {
 		if(gm.player.defeatBoss==true) {
-			gm.rChanger.showEndScreen(2);
+			
 		}else {
 		
 		if(gm.player.playerCurrentLife!=gm.player.playerMaxLife) {

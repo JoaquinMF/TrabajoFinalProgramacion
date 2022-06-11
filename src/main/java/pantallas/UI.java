@@ -44,6 +44,7 @@ public class UI {
 	public JLabel itemLabel;
 	
 	//GAME OVER UI
+	public JLabel endLabel;
 	public JLabel gameOverLabel;
 	public JButton restartButton;
 	
@@ -254,7 +255,6 @@ public class UI {
 		window.add(restartButton);
 	}
 	
-	
 	public void generateRegion() {
 
 		//REGION 1
@@ -276,18 +276,20 @@ public class UI {
 		
 		//REGION 3
 		createBackgroundImage(3, "lootbay1024x800.png");
-		createObject(3, 550, 350, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
+		createObject(3, 150, 350, 435, 346, "skeleton2OBJECT435x346.png", "Look", "Attack", "Talk", "lookSkeleton2", "attackSkeleton2","talkSkeleton2");
 		createObject(3, 480, 200, 100, 100, "blankICON300X300.png", "Look", "Talk", "Enter", "lookTemple", "talkTemple","enterTemple");
 		createArrowButton(3,900,780,100,100,"directionArrowICON.png","goRegion1");
 		bgPanel[3].add(bgLabel[3]);
 		
 		//REGION 4
 		createBackgroundImage(4, "temple1024x800.png");
-		createObject(4, 550, 350, 435, 346, "bossICON500x405.png", "Look", "Attack", "Talk", "lookBoss", "attackBoss","talkBoss");
+		createObject(4, 350, 350, 435, 346, "bossICON500x405.png", "Look", "Attack", "Talk", "lookBoss", "attackBoss","talkBoss");
 		createArrowButton(4,900,780,100,100,"directionArrowICON.png","goRegion3");
 		bgPanel[4].add(bgLabel[4]);
 		
 		//End Screen
+		createBackgroundImage(5, "startScreen1024x800.png");
+		bgPanel[5].add(bgLabel[5]);
 		
 		
 	}

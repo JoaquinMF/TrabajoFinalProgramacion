@@ -2,12 +2,13 @@ package clases;
 
 public class Seta extends Monster{
 	
+	
 	public Seta() {
+		
 	monsterName = "Mushroom";
-	monsterMaxLife = 1;
-	monsterCurrentLife = 1;
+	monsterLife = 3;
 	monsterAttack = 1; 
-	monsterDefense = 1;
+	monsterDefense = 0;
 
   }
 }

@@ -21,8 +21,6 @@ public class GameManager {
 	Music music = new Music();
 	SE se = new SE();
 	
-	public BattleManager bm= new BattleManager(this);
-	
 	public Event01 ev1=new Event01(this);
 	public Event02 ev2=new Event02(this);
 	public Event03 ev3=new Event03(this);
@@ -35,8 +33,7 @@ public class GameManager {
 	public URL regionMusic3 = getClass().getClassLoader().getResource("audio//region3.wav");
 	public URL regionMusic4 = getClass().getClassLoader().getResource("audio//region4.wav");
 	public URL setaSound = getClass().getClassLoader().getResource("audio//setaSound.wav");
-	public URL skeletonSound1 = getClass().getClassLoader().getResource("audio//skeletonSound1.wav");
-	public URL bossSound = getClass().getClassLoader().getResource("audio//bossSound.wav");
+	public URL bossAudio = getClass().getClassLoader().getResource("audio//bossAudio.wav");
 	public URL deadSound = getClass().getClassLoader().getResource("audio//deadSound.wav");
 	public URL hitSound = getClass().getClassLoader().getResource("audio//hitSound.wav");
 	public URL hittedSound = getClass().getClassLoader().getResource("audio//hittedSound.wav");
