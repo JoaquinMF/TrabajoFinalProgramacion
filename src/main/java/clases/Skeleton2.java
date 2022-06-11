@@ -5,7 +5,18 @@ import java.sql.Statement;
 
 import utils.UtilsDB;
 
+/**
+ * Clase cuya instancia representa al monstruo Skeleton2
+ * @author Duendeboss
+ *
+ */
+
 public class Skeleton2 extends Monster {
+	
+	/**
+	 * funcion que al llamarla instancia y settea al monstruo Skeleton2, además de hacer una inserción en la tabla monster de la base de datos proyectoFinal
+	 */
+	
 
 	public Skeleton2() {
 		monsterName = "Skeleton2";

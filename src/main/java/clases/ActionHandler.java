@@ -6,14 +6,36 @@ import java.awt.event.ActionListener;
 import exceptions.ExceptionSetaViva;
 import exceptions.ExceptionSkeletonVivo;
 
+/**
+ * Clase que va a manejar las accciones realizadas.
+ * Unica variable interna gm, de tipo GameManager
+ * implements ActionListener (The listener interface for receiving action events.)
+ * @author Duendeboss
+ *
+ */
+
 public class ActionHandler implements ActionListener {
 
+	/**
+	 * el gm, que sirve para llamarlo cuando querramos controlar un aspecto en concreto del juego
+	 */
 	GameManager gm;
+	
+	/**
+	 * metodo para llamar a gm
+	 * @param gm (tipo GameManager)
+	 */
 
 	public ActionHandler(GameManager gm) {
 
 		this.gm = gm;
 	}
+	
+	/**
+	 * metodo para realizar las acciones.
+	 * switch (yourChoice). Switch que contiene todas las acciones que se pueden realizar en el juego
+	 *  @param e (tipo ActionEvent)
+	 */
 
 	public void actionPerformed(ActionEvent e) {
 

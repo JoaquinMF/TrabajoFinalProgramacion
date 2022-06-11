@@ -24,32 +24,78 @@ import java.awt.event.MouseAdapter;
 import javax.swing.UIManager;
 import java.awt.GridLayout;
 
+/**
+ * Clase cuyas instancias representa toda la INTERFAZ DE USUARIO (pantallas) y sus elementos visuales
+ * @author Duendeboss
+ *
+ */
+
 public class UI {
 
+	/**
+	 * gm, tipo GameManager. Al llamarla (gm.) manejamos y controlamos todo el juego
+	 */
 	GameManager gm;
 
+	/**
+	 * Es la ventana del juego
+	 */
 	public JFrame window;
+	/**
+	 * es la caja donde aparecen los mensajes de texto
+	 */
 	public JTextArea messages;
+	/**
+	 * Array de JPanel donde se instancian todas las pantallas que queremos que tenga nuestro juego
+	 */
+	
 	public JPanel bgPanel[] = new JPanel[10];
+	/**
+	 * Array de JLabel donde se instancian todas las imagenes y elementos visuales que queremos que se enseñen en nuestro juego
+	 */
 	public JLabel bgLabel[] = new JLabel[10];
 	
-	//Player UI
-	
+
+	/**
+	 * Elemento JPanel de la infertaz que representa la vida (corazon) del jugador
+	 */
 	JPanel lifePanel;
+	/**
+	 * array de JLabel, instancia los iconos (corazones) que representan la vida del jugador
+	 */
 	public JLabel lifeLabel[]=new JLabel[6];
-	
+	/**
+	 * Variable JPanel que representa el inventario del jugador
+	 */
 	JPanel inventoryPanel;
+	/**
+	 * instancia del icono del arma del jugador, lo muestra en el inventario
+	 */
 	public JLabel weaponLabel;
+	/**instancia del icono de la defensa del jugador, lo muestra en el inventario
+	 * 
+	 */
 	public JLabel defenseLabel;
+	/**
+	 * instancia del icono del objeto que posea el jugador, lo muestra en el inventario
+	 */
 	public JLabel itemLabel;
-	
-	//GAME OVER UI
+	/**
+	 * instancia de la imagen que se muestra en la pantalla END GAME al finalizar el juego
+	 */
+
 	public JLabel endLabel;
+	/**
+	 * instancia de la imagen que muestra al morir (game over screen)
+	 */
 	public JLabel gameOverLabel;
+	/**
+	 * instancia del boton necesario para reiniciar el juego en la pantalla de game over
+	 */
 	public JButton restartButton;
-	
-	
-	// public HashMap<String,JPanel> bgPanel=new HashMap<String,JPanel>();
+	/**
+	 * metodo que sirve para generar todos los elementos visuales
+	 */
 
 	public UI(GameManager gm) {
 		this.gm = gm;
@@ -62,6 +108,10 @@ public class UI {
 		
 		window.setVisible(true);
 	}
+	
+	/**
+	 * metodo que al llamarlo crea la pantalla principal donde se contienen los elementos visuales
+	 */
 
 	public void createMainField() {
 
@@ -84,6 +134,10 @@ public class UI {
 	
 		
 	}
+	
+	/**
+	 * metodo que al llamarlo genera la imagen de fondo de las pantallas
+	 */
 
 	public void createBackgroundImage(int bgNum, String bgFileName) {
 
@@ -104,6 +158,10 @@ public class UI {
 
 	}
 
+	/**
+	 * metodo que al llamarlo genera y enseña los 'objetos' interactuables
+	 */
+	
 	public void createObject(int bgNum, int objx, int oby, int objWidth, int objectHeight, String objFileName,
 			String choice1Name, String choice2Name, String choice3Name, String choice1Command, String choice2Command,
 			String choice3Command) {
@@ -127,12 +185,9 @@ public class UI {
 		menuItem[3].setActionCommand(choice3Command);
 		popMenu.add(menuItem[3]);
 		
-		// CREATE OBJECTS
+		
 		final JLabel objectLabel = new JLabel();
 		objectLabel.setBounds(objx, oby, objWidth, objectHeight);
-		
-		//objectLabel.setOpaque(true);
-		//objectLabel.setBackground(Color.blue);
 		
 		ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource(objFileName));
 		objectLabel.setIcon(objectIcon);
@@ -165,6 +220,10 @@ public class UI {
 
 	}
 	
+	/**
+	 * metodo que al llamarlo genera y enseña la flecha (icono) necesaria para transicionar entre pantallas (regiones)
+	 */
+	
 	public void createArrowButton(int bgNum, int x, int y, int width, int height, String arrowFileName, String command) {
 		
 		//final JLabel objectLabel = new JLabel();
@@ -185,6 +244,10 @@ public class UI {
 		bgPanel[bgNum].add(arrowButton);
 		
 	}
+	
+	/**
+	 * metodo que al llamarlo genera y enseña el HUD del jugador
+	 */
 
 	public void createPlayerField() {
 		
@@ -233,6 +296,10 @@ public class UI {
 		
 	}
 	
+	/**
+	 * metodo que al llamarlo genera y enseña la pantalla de GAME OVER
+	 */
+	
 	public void createGameOverField() {
 		
 		gameOverLabel=new JLabel("",JLabel.CENTER);
@@ -254,6 +321,10 @@ public class UI {
 		restartButton.setVisible(false);
 		window.add(restartButton);
 	}
+	
+	/**
+	 * metodo que al llamarlo genera y enseña las regiones (pantallas) completas con todos los 'objetos' con los que puede interactuar el jugador.
+	 */
 	
 	public void generateRegion() {
 

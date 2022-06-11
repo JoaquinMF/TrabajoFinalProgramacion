@@ -5,9 +5,16 @@ import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-
+/**
+ * Clase cuyas instancias representan los efectos de sonido del juego
+ * @author Duendeboss
+ *
+ */
 public class SE {
 
+	/**
+	 * clip, es la variable interna de tipo CLIP que usaremos para los sonidos y musica
+	 */
 	Clip clip;
 
 	/**
@@ -48,6 +55,11 @@ public class SE {
 		clip.loop(Clip.LOOP_CONTINUOUSLY);
 
 	}
+	
+	/**
+	 * metodo que al llamarlo detiene los efectos de sonido
+	 * @param name (nombre del archivo de sonido)
+	 */
 	
 	public void stop(URL name) {
 

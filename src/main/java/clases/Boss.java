@@ -5,7 +5,18 @@ import java.sql.Statement;
 
 import utils.UtilsDB;
 
+/**
+ * Clase que contiene al Boss, extiende de Monster
+ * @author Duendeboss
+ *
+ */
+
 public class Boss extends Monster{
+	
+	/**
+	 * Metodo para llamar y establecer al Boss.
+	 * El Statement query realiza una inserción en la base de datos proyectoFinal
+	 */
 	
 	public Boss() {
 		monsterName = "Boss";

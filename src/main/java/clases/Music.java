@@ -8,6 +8,9 @@ import javax.sound.sampled.Clip;
 
 public class Music {
 	
+	/**
+	 * clip, es la variable interna de tipo CLIP que usaremos para los sonidos y musica
+	 */
 	Clip clip;
 
 	/**
@@ -49,6 +52,10 @@ public class Music {
 
 	}
 
+	/**
+	 * metodo que al llamarlo para la musica
+	 * @param name (nombre del archivo de sonido)
+	 */
 	public void stop(URL name) {
 
 		clip.stop();

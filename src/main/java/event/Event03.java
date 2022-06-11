@@ -7,18 +7,39 @@ import clases.Monster;
 import clases.Skeleton2;
 import exceptions.ExceptionSkeletonVivo;
 
+/**
+ * Clase donde esta todo lo necesario para controlar y que sean realizables todas las acciones que existen en el Event03 (3º pantalla)
+ * @author Duendeboss
+ *
+ */
 public class Event03 {
 
+	/**
+	 * gm, tipo GameManager. Al llamarla (gm.) manejamos y controlamos todo el juego
+	 */
 	public GameManager gm;
-	
+	/**
+	 * El monstruo.
+	 */
 	Monster monster;
+	/**
+	 * Instancia del monstruo skeleton2
+	 */
+
 	Skeleton2 skeleton2 = new Skeleton2();
-
-
+	
+	/**
+	 * Metodo que al llamarlo controla las acciones y eventos de Event03
+	 * @param gm
+	 */
+	
 	public Event03(GameManager gm) {
 		this.gm = gm;
 	}
-
+	
+	/**
+	 * Metodo que sirve para realizar la accion lookSkeleton2 (look)
+	 */
 	public void lookSkeleton2() {
 		if (gm.player.defeatSkeleton2 == false) {
 			gm.ui.messages.setText("You look at the skeleton, so very smashable.");
@@ -28,7 +49,11 @@ public class Event03 {
 		}
 
 	}
-
+	
+	/**
+	 * Metodo que sirve para realizar la accion attackSkeleton2 (attack)
+	 */
+	
 	public void attackSkeleton2() {
 
 		skeleton2.monsterLife = skeleton2.monsterLife;
@@ -91,7 +116,10 @@ public class Event03 {
 
 	}
 
-
+	/**
+	 * Metodo que sirve para realizar la accion talkSkeleton2 (talk)
+	 */
+	
 	public void talkSkeleton2() {
 
 		if (gm.player.defeatSkeleton2 == false) {
@@ -102,16 +130,29 @@ public class Event03 {
 		}
 
 	}
+	
+	/**
+	 * Metodo que sirve para realizar la accion lookTemple (look)
+	 */
 
 	public void lookTemple() {
 		gm.ui.messages.setText("You look at the temple, with sweating hands, thinking about the baddie inside");
 
 	}
+	
+	/**
+	 * Metodo que sirve para realizar la accion talkTemple (talk)
+	 */
 
 	public void talkTemple() {
 		gm.ui.messages.setText("You hear the echoes from within...");
 
 	}
+	
+	/**
+	 * metodo para realizar la accion enterTemple(enter)
+	 * @throws ExceptionSkeletonVivo (Excepcion que salta cuando intentamos entrar al templo sin haber derrotado previamente al esqueleto (skeleton2)
+	 */
 
 	public void enterTemple() throws ExceptionSkeletonVivo {
 

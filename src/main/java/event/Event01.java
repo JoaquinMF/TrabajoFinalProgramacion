@@ -7,24 +7,48 @@ import clases.Monster;
 import clases.Seta;
 import exceptions.ExceptionSetaViva;
 
+/**
+ * Clase donde esta todo lo necesario para controlar y que sean realizables todas las acciones que existen en el Event01 (1º pantalla)
+ * @author Duendeboss
+ *
+ */
+
 public class Event01 {
 
+	/**
+	 * gm, tipo GameManager. Al llamarla (gm.) manejamos y controlamos todo el juego
+	 */
 	GameManager gm;
-
+	/**
+	 * El monstruo.
+	 */
 	Monster monster;
+	/**
+	 * Instancia del monstruo seta
+	 */
 	Seta seta = new Seta();
 
+	/**
+	 * Metodo que al llamarlo controla las acciones y eventos de Event01
+	 * @param gm
+	 */
 	public Event01(GameManager gm) {
 
 		this.gm = gm;
 
 	}
-
+	
+	/**
+	 * Metodo que sirve para realizar la accion lookChest (look)
+	 */
 
 	public void lookChest() {
 		gm.ui.messages.setText("A sparkling chest, probably with shiny loot. What will you do?");
 
 	}
+	/**
+	 * Metodo para realizar la accion openChest (open)
+	 */
 
 	public void openChest() {
 
@@ -38,11 +62,17 @@ public class Event01 {
 		}
 
 	}
+	/**
+	 * metodo para realizar la accion talkChest(talk)
+	 */
 
 	public void talkChest() {
 		gm.ui.messages.setText("You approach the chest. Then you recite to the RNG Goddess...");
 
 	}
+	/**
+	 * metodo para realizar la accion lookSeta (look)
+	 */
 
 	public void lookSeta() {
 		if (gm.player.defeatSeta == false) {
@@ -53,6 +83,10 @@ public class Event01 {
 		}
 
 	}
+	
+	/**
+	 * Metodo para realizar la accion attackSeta(attack)
+	 */
 
 	public void attackSeta() {
 		
@@ -116,6 +150,10 @@ public class Event01 {
 		}
 
 	}
+	
+	/**
+	 * Metodo Para realizar la accion talkSeta (talk)
+	 */
 
 	public void talkSeta() {
 
@@ -129,16 +167,29 @@ public class Event01 {
 		}
 
 	}
+	
+	/**
+	 * metodo para realizar la accion lookCliff(look)
+	 */
 
 	public void lookCliff() {
 		gm.ui.messages.setText("You look at the cliff in front of You, maybe You need something to climb it?");
 
 	}
+	
+	/**
+	 * metodo para realizar la accion talkCliff(talk)
+	 */
 
 	public void talkCliff() {
 		gm.ui.messages.setText("You hear the wind pass by...");
 
 	}
+	
+	/**
+	 * metodo para realizar la accion climbCliff (climb)
+	 * @throws ExceptionSetaViva (excepcion que salta si intentas climbCliff (climb) antes de derrotar a la Seta (Mushroom))
+	 */
 
 	public void climbCliff() throws ExceptionSetaViva{
 

@@ -1,10 +1,22 @@
 package clases;
 
+/**
+ * Clase cuya instancia representa al jugador
+ * @author Duendeboss
+ *
+ */
+
 public class Player extends EntityStatsAndItems {
 	
+	/**
+	 * gm, tipo GameManager. Al llamarla (gm.) manejamos y controlamos todo el juego
+	 */
 	GameManager gm;
 	
-	
+	/**
+	 * funcion que al llamarla controlamos y manejamos al jugador
+	 * @param gm
+	 */
 	
 	public Player(GameManager gm) {
 		
@@ -12,6 +24,9 @@ public class Player extends EntityStatsAndItems {
 		
 	}
 	
+	/**
+	 * Metodo que establece las estadisticas y objetos del jugador nada mas empezar el juego
+	 */
 	public void setPlayerDefaultStatus() {
 		
 		playerMaxLife = 5;
@@ -29,6 +44,9 @@ public class Player extends EntityStatsAndItems {
 		updatePlayerStatus();
 		
 	}
+	/**
+	 * Metodo que actualiza las estadisticas y objetos del jugador a lo largo del juego
+	 */
 	
 	public void updatePlayerStatus() {
 

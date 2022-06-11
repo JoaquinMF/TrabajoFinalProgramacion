@@ -1,14 +1,31 @@
 package clases;
 
+/**
+ * Clase cuyas instancias sirven para cambiar de region (pantalla) a lo largo del juego
+ * @author Duendeboss
+ *
+ */
+
 public class RegionChanger {
 
+	/**
+	 * gm, tipo GameManager. Al llamarla (gm.) manejamos y controlamos todo el juego
+	 */
+	
 	GameManager gm;
 
+	/**
+	 * metodo para controlar el cambio de region
+	 * @param gm
+	 */
 	public RegionChanger(GameManager gm) {
 
 		this.gm = gm;
 
 	}
+	/**
+	 * Metodo que al llamarlo enseña la primera region (pantalla) con musica incluida
+	 */
 
 	public void showRegion1() {
 
@@ -22,6 +39,9 @@ public class RegionChanger {
 		gm.currentMusic = gm.regionMusic;
 		gm.playMusic(gm.currentMusic);
 	}
+	/**
+	 * Metodo que al llamarlo enseña la segunda region (pantalla) con musica incluida
+	 */
 
 	public void showRegion2() {
 
@@ -38,6 +58,9 @@ public class RegionChanger {
 	
 	}
 
+	/**
+	 * Metodo que al llamarlo enseña la tercera region (pantalla) con musica incluida
+	 */
 	public void showRegion3() {
 
 		gm.ui.bgPanel[1].setVisible(false);
@@ -52,6 +75,9 @@ public class RegionChanger {
 		gm.playMusic(gm.currentMusic);
 	
 	}
+	/**
+	 * Metodo que al llamarlo enseña la cuarta region (pantalla) con musica incluida
+	 */
 	
 	public void showRegion4() {
 
@@ -79,7 +105,9 @@ public class RegionChanger {
 		gm.stopMusic(gm.currentMusic);
 	}
 	
-	
+	/**
+	 * Metodo que al llamarlo enseña la pantalla de game over, con efecto de sonido propio incluido
+	 */
 
 	public void showGameOverScreen(int currentBgNum) {
 
@@ -93,6 +121,9 @@ public class RegionChanger {
 		gm.playSE(gm.deadSound);
 		
 	}
+	/**
+	 * Metodo que al llamarlo sirve para salir de la pantalla de game over y empezar de nuevo el juego desde el principio.
+	 */
 	
 	public void exitGameOverScreen() {
 		
