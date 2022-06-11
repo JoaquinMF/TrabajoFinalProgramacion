@@ -3,6 +3,9 @@ package clases;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import exceptions.ExceptionSetaViva;
+import exceptions.ExceptionSkeletonVivo;
+
 public class ActionHandler implements ActionListener {
 
 	GameManager gm;
@@ -27,7 +30,11 @@ public class ActionHandler implements ActionListener {
 		case "talkSeta": gm.ev1.talkSeta();break;
 		case "lookCliff": gm.ev1.lookCliff();break;
 		case "talkCliff":gm.ev1.talkCliff();break;
-		case "climbCliff":gm.ev1.climbCliff();break;
+		case "climbCliff":try {
+				gm.ev1.climbCliff();
+			} catch (ExceptionSetaViva e1) {
+				gm.ui.messages.setText("This is the Exception. Kill the mushroom to continue");
+			}break;
 		//REGION 2
 		case "lookCastle":gm.ev2.lookCastle();break;
 		case "restCastle":gm.ev2.restCastle();break;
@@ -44,7 +51,12 @@ public class ActionHandler implements ActionListener {
 		case "talkSkeleton2": gm.ev3.talkSkeleton2();break;
 		case "lookTemple": gm.ev3.lookTemple();break;
 		case "talkTemple":gm.ev3.talkTemple();break;
-		case "enterTemple":gm.ev3.enterTemple();break;
+		case "enterTemple":try {
+				gm.ev3.enterTemple();
+			} catch (ExceptionSkeletonVivo e1) {
+				
+				System.err.println("This is the Exception. Kill the Skeleton to continue");
+			}break;
 		//REGION 4
 		case "lookBoss": gm.ev4.lookBoss();break;
 		case "attackBoss": gm.ev4.attackBoss();break;

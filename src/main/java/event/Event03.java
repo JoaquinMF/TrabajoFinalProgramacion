@@ -5,6 +5,7 @@ import java.util.Random;
 import clases.GameManager;
 import clases.Monster;
 import clases.Skeleton2;
+import exceptions.ExceptionSkeletonVivo;
 
 public class Event03 {
 
@@ -112,17 +113,18 @@ public class Event03 {
 
 	}
 
-	public void enterTemple() {
+	public void enterTemple() throws ExceptionSkeletonVivo {
 
-		if (gm.player.hasItem == 0) {
-
-			gm.ui.messages.setText("You can't enter the temple right now, you need a rope to climb up.");
-
-		} else {
-
+		
+		if(gm.player.hasItem==0) {
+			gm.ui.messages.setText("You can't enter the temple right now...");
+		}else if(gm.player.defeatSkeleton2==false) {
+			gm.ui.messages.setText("This is the Exception. Kill the Skeleton to continue");
+		}else {
+			
 			gm.rChanger.showRegion4();
-
-		}
+		}	
+  
 	}
 
 }

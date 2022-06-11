@@ -2,6 +2,12 @@ package event;
 
 
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+
 import clases.Boss;
 import clases.GameManager;
 import clases.Monster;
@@ -89,6 +95,31 @@ public class Event04 {
 			gm.player.playerCurrentLife=0;
 			gm.player.updatePlayerStatus();
 			gm.player.defeatBoss=true;
+			
+			try {
+				
+	            File informe = new File("./informe" + ".txt");
+	            informe.createNewFile();
+	            File carpetaInforme = new File("./");
+	            File[] hijos = carpetaInforme.listFiles();
+	            FileWriter escritor = new FileWriter("./informe.txt");
+	            
+	            for (byte i = 0; i < hijos.length; i++) {
+	            if (hijos[i].isFile()) {
+	    
+	            escritor.write("\n"+"CONGRATULATIONS, YOU WON THE GAME!");
+	           
+	            } else {
+	           
+	            }
+	            
+	            }
+	            
+	            escritor.close();
+	            
+	            } catch (IOException e) {
+	            System.out.println(e.getMessage());
+	            }
 			
 		}
 		

@@ -5,6 +5,7 @@ import java.util.Random;
 import clases.GameManager;
 import clases.Monster;
 import clases.Seta;
+import exceptions.ExceptionSetaViva;
 
 public class Event01 {
 
@@ -139,19 +140,18 @@ public class Event01 {
 
 	}
 
-	public void climbCliff() {
+	public void climbCliff() throws ExceptionSetaViva{
 
 		if(gm.player.hasItem==0) {
 			gm.ui.messages.setText("You can't climb the cliff right now...");
 		}else if(gm.player.defeatSeta==false) {
-			gm.ui.messages.setText("Kill the mushroom to keep going...");
-			
+			gm.ui.messages.setText("This is the Exception. Kill the mushroom to continue");
 		}else {
 			
 			gm.rChanger.showRegion3();
-		}
-		
+		}	
   }
+	
 	
 	
 	
