@@ -26,7 +26,7 @@ public class Event01 {
 	/**
 	 * Instancia del monstruo seta
 	 */
-	Seta seta = new Seta();
+	Monster seta = new Seta();
 
 	/**
 	 * Metodo que al llamarlo controla las acciones y eventos de Event01
