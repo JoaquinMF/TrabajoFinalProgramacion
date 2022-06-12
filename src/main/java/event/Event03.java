@@ -26,7 +26,7 @@ public class Event03 {
 	 * Instancia del monstruo skeleton2
 	 */
 
-	Skeleton2 skeleton2 = new Skeleton2();
+	Monster skeleton2 = new Skeleton2();
 	
 	/**
 	 * Metodo que al llamarlo controla las acciones y eventos de Event03
