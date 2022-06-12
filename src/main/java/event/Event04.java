@@ -30,7 +30,7 @@ public class Event04 {
 	/**
 	 * Instancia del monstruo boss
 	 */
-	Boss boss = new Boss();
+	Monster boss = new Boss();
 	
 	/**
 	 * Metodo que al llamarlo controla las acciones y eventos de Event04
