@@ -1,0 +1,11 @@
+uso de PopMenu para mostrar un desplegable de tres opciones diferentes
+(javax.swing.JPopupMenu, javax.swing.SwingUtilities, 
+java.awt.event.ActionEvent,java.awt.event.ActionListener;mouse event pressed)
+
+
+uso de musica y efectos de sonido (java.sound.sampled.AudioInputStream, 
+java.sound.sampled.AudioSystem y java.sound.sampled.Clip)
+
+
+uso de 'objetos' que son JLabel pero son interactuables y reaccionan
+a las acciones del jugador.
